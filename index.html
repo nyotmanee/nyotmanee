@@ -3,66 +3,144 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Natasha Yotmanee — International Relations | Data Science | Peace & Humanitarian Focus" />
+  <meta name="description" content="Natasha Yotmanee - International Relations | Data Science | Asia-Pacific" />
   <title>Natasha Yotmanee</title>
 
   <style>
     :root{
-      --bg: #0b0f17;
-      --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.08);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.72);
-      --muted2: rgba(255,255,255,0.62);
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 18px 40px rgba(0,0,0,0.35);
+      --bg: #ffffff;
+      --bg2: #f6fbfa;
+
+      --panel: #ffffff;
+
+      --text: #0f172a;
+      --muted:#475569;
+      --muted2:#64748b;
+      --border:#e2e8f0;
+
+      --shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+      --shadow2: 0 14px 30px rgba(15, 23, 42, 0.10);
       --radius: 18px;
       --max: 1040px;
 
-      --accent: #7dd3fc;   /* light blue */
-      --accent2: #a7f3d0;  /* mint */
-      --warn: #fde68a;     /* amber */
-      --good: #bbf7d0;     /* green */
+      --accent: #0ea5a6;
+      --accent2:#2563eb;
+      --purple: #6366f1;
+
+      --link: #0b6b6b;
+      --focus: rgba(37,99,235,0.18);
+
+      --btnBg: rgba(14,165,166,0.10);
+      --btnBd: rgba(14,165,166,0.28);
+      --btnTx: #064e4e;
+
+      --fxBg: rgba(99,102,241,0.12);
+      --fxBd: rgba(99,102,241,0.34);
+      --fxTx: #3730a3;
+
+      --skillBg: rgba(37,99,235,0.10);
+      --skillBd: rgba(37,99,235,0.26);
+      --skillTx: #1e3a8a;
+
+      --lovePurpleBg: rgba(99,102,241,0.08);
+      --lovePurpleBd: rgba(99,102,241,0.22);
+
+      --loveGreenBg: rgba(14,165,166,0.08);
+      --loveGreenBd: rgba(14,165,166,0.22);
+
+      --loveBlueBg: rgba(37,99,235,0.06);
+      --loveBlueBd: rgba(37,99,235,0.18);
+
+      /* Open Post button alternating colors — matched to "Some Things I Love" cards */
+      /* Purple  (Food 🍲) */
+      --opBtn1Bg: rgba(99,102,241,0.12);
+      --opBtn1Bd: rgba(99,102,241,0.30);
+      --opBtn1Tx: #3730a3;
+      /* Blue  (Travel 🌎) */
+      --opBtn2Bg: rgba(37,99,235,0.10);
+      --opBtn2Bd: rgba(37,99,235,0.28);
+      --opBtn2Tx: #1e3a8a;
+      /* Green  (Books 📚) */
+      --opBtn3Bg: rgba(14,165,166,0.10);
+      --opBtn3Bd: rgba(14,165,166,0.28);
+      --opBtn3Tx: #064e4e;
+      /* Teal  (Bucket List) */
+      --opBtn4Bg: rgba(14,165,166,0.06);
+      --opBtn4Bd: rgba(14,165,166,0.20);
+      --opBtn4Tx: #065f5f;
+
+      --researchCardBg: rgba(99,102,241,0.06);
+      --researchCardBd: rgba(99,102,241,0.18);
+
+      --pubCardBg: rgba(14,165,166,0.06);
+      --pubCardBd: rgba(14,165,166,0.18);
+
+      --activeTabBg: rgba(67, 56, 202, 0.14);
+      --activeTabBd: rgba(67, 56, 202, 0.30);
+      --activeTabTx: #312e81;
+
+      --rcBtnBg: rgba(99,102,241,0.12);
+      --rcBtnBd: rgba(99,102,241,0.34);
+      --rcBtnTx: #3730a3;
+
+      --contactGreenBg: rgba(14,165,166,0.10);
+      --contactGreenBd: rgba(14,165,166,0.26);
+      --contactGreenTx: #064e4e;
+
+      --contactBlueBg: rgba(37,99,235,0.10);
+      --contactBlueBd: rgba(37,99,235,0.24);
+      --contactBlueTx: #1e3a8a;
     }
 
     * { box-sizing: border-box; }
     html, body { height: 100%; }
+    html {
+      background:
+        radial-gradient(ellipse 200% 100% at 0% 0%,   rgba(14,165,166,0.07),  transparent 65%),
+        radial-gradient(ellipse 180% 90%  at 100% 0%,  rgba(37,99,235,0.05),   transparent 65%),
+        radial-gradient(ellipse 200% 80%  at 50% 50%,  rgba(99,102,241,0.04),  transparent 65%),
+        radial-gradient(ellipse 200% 80%  at 0% 100%,  rgba(14,165,166,0.05),  transparent 65%),
+        radial-gradient(ellipse 180% 80%  at 100% 100%,rgba(37,99,235,0.04),   transparent 65%),
+        #ffffff;
+      min-height: 100%;
+    }
     body{
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color: var(--text);
-      background:
-        radial-gradient(1000px 700px at 12% 10%, rgba(125,211,252,0.12), transparent 60%),
-        radial-gradient(900px 600px at 90% 18%, rgba(167,243,208,0.10), transparent 55%),
-        radial-gradient(700px 500px at 55% 90%, rgba(253,230,138,0.08), transparent 55%),
-        var(--bg);
-      line-height: 1.5;
+      background: transparent;
+      line-height: 1.55;
     }
 
-    a{ color: var(--text); text-decoration: none; }
+    a{ color: var(--link); text-decoration: none; }
     a:hover{ text-decoration: underline; }
 
-    /* Layout */
     .wrap{
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
-      padding: 20px 18px 64px;
+      padding: 18px 18px 72px;
+      position: relative;
+      z-index: 0;
     }
 
-    /* Top bar */
     .topbar{
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 1000;
+      background: rgba(255,255,255,0.86);
       backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(11,15,23,0.82), rgba(11,15,23,0.55));
       border-bottom: 1px solid var(--border);
+    }
+
+    /* Offset anchor scroll targets so the sticky header never covers them */
+    [id]{
+      scroll-margin-top: 80px;
     }
     .topbarInner{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 14px 18px;
+      padding: 12px 18px;
       display: flex;
       gap: 12px;
       align-items: center;
@@ -70,20 +148,28 @@
     }
     .brand{
       display: flex;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
-      min-width: 220px;
+      min-width: 240px;
     }
     .avatar{
-      width: 34px; height: 34px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(125,211,252,0.9), rgba(167,243,208,0.9));
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-      border: 1px solid rgba(255,255,255,0.16);
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, rgba(14,165,166,0.18), rgba(37,99,235,0.18));
+      flex: 0 0 auto;
+    }
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
     }
     .brandText{
       display: grid;
-      line-height: 1.12;
+      line-height: 1.15;
     }
     .brandText strong{ font-size: 14px; letter-spacing: 0.2px; }
     .brandText span{ font-size: 12px; color: var(--muted2); }
@@ -99,9 +185,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(2, 132, 199, 0.06);
       border: 1px solid var(--border);
       color: var(--muted);
       font-size: 13px;
@@ -110,24 +196,19 @@
     }
     .pill:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,0.085);
-      border-color: rgba(255,255,255,0.18);
+      background: rgba(14,165,166,0.10);
+      border-color: rgba(14,165,166,0.28);
       text-decoration: none;
     }
     .pill.active{
-      color: var(--text);
-      background: rgba(125,211,252,0.12);
-      border-color: rgba(125,211,252,0.32);
+      color: var(--activeTabTx);
+      background: var(--activeTabBg);
+      border-color: var(--activeTabBd);
     }
 
-    /* Sections (subpages) */
-    .page{
-      display: none;
-      padding-top: 22px;
-    }
+    .page{ display: none; padding-top: 20px; }
     .page.active{ display: block; }
 
-    /* Cards */
     .card{
       background: var(--panel);
       border: 1px solid var(--border);
@@ -135,20 +216,17 @@
       box-shadow: var(--shadow);
     }
     .card.pad{ padding: 18px; }
-    .grid{
-      display: grid;
-      gap: 16px;
-    }
+
+    .grid{ display: grid; gap: 16px; }
     @media (min-width: 900px){
       .grid.cols2{ grid-template-columns: 1.1fr 0.9fr; }
-      .grid.cols3{ grid-template-columns: 1fr 1fr 1fr; }
+      .grid.cols2even{ grid-template-columns: 1fr 1fr; }
     }
 
-    /* Typography */
     h1{
       margin: 0 0 8px;
       font-size: 30px;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.4px;
     }
     h2{
       margin: 0 0 10px;
@@ -159,83 +237,139 @@
       margin: 0 0 6px;
       font-size: 15px;
       letter-spacing: 0.1px;
-      color: rgba(255,255,255,0.9);
+      color: var(--text);
     }
     p{ margin: 0 0 12px; color: var(--muted); }
     .muted{ color: var(--muted2); }
-    .tagRow{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      color: rgba(255,255,255,0.78);
-    }
-    .tag.accent{ border-color: rgba(125,211,252,0.32); background: rgba(125,211,252,0.10); }
-    .tag.mint{ border-color: rgba(167,243,208,0.28); background: rgba(167,243,208,0.08); }
-    .tag.amber{ border-color: rgba(253,230,138,0.25); background: rgba(253,230,138,0.08); }
-
-    /* Buttons */
-    .btnRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border-radius: 12px;
-      padding: 11px 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
+    .kicker{
+      color: var(--muted2);
       font-size: 13px;
-      cursor: pointer;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      margin-bottom: 12px;
     }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.085);
-      border-color: rgba(255,255,255,0.18);
-      text-decoration: none;
-    }
-    .btn.primary{
-      background: rgba(125,211,252,0.14);
-      border-color: rgba(125,211,252,0.34);
-    }
-    .btn.primary:hover{
-      background: rgba(125,211,252,0.18);
-      border-color: rgba(125,211,252,0.42);
-    }
-    .btn.ghost{
-      background: transparent;
-    }
-
-    /* Lists / timeline */
-    .list{
-      margin: 0; padding-left: 18px; color: var(--muted);
-    }
-    .list li{ margin: 6px 0; }
     .divider{
       height: 1px;
       background: var(--border);
       margin: 14px 0;
     }
 
-    .timeline{
-      display: grid;
-      gap: 12px;
-      margin-top: 10px;
+    .btnRow{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--btnBd);
+      background: var(--btnBg);
+      color: var(--btnTx);
+      font-size: 13px;
+      cursor: pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease, box-shadow .12s ease;
+      box-shadow: 0 6px 14px rgba(15,23,42,0.06);
+      white-space: nowrap;
+      text-decoration: none;
     }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(14,165,166,0.16);
+      border-color: rgba(14,165,166,0.40);
+      text-decoration: none;
+    }
+    .btn.ghost{
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn.ghost:hover{
+      background: rgba(15,23,42,0.04);
+      border-color: rgba(15,23,42,0.14);
+    }
+
+    .btn.fx{
+      background: rgba(99,102,241,0.12);
+      border-color: rgba(99,102,241,0.34);
+      color: #3730a3;
+    }
+    .btn.fx:hover{
+      background: rgba(99,102,241,0.18);
+      border-color: rgba(99,102,241,0.44);
+    }
+
+    .btn.rc{
+      background: var(--rcBtnBg);
+      border-color: var(--rcBtnBd);
+      color: var(--rcBtnTx);
+    }
+    .btn.rc:hover{
+      background: rgba(99,102,241,0.18);
+      border-color: rgba(99,102,241,0.44);
+    }
+
+    /* Alternating "Open Post" button colors — cycle of 4 */
+    .btn.op1{ background: var(--opBtn1Bg); border-color: var(--opBtn1Bd); color: var(--opBtn1Tx); }
+    .btn.op1:hover{ background: rgba(99,102,241,0.20); border-color: rgba(99,102,241,0.44); text-decoration:none; }
+    .btn.op2{ background: var(--opBtn2Bg); border-color: var(--opBtn2Bd); color: var(--opBtn2Tx); }
+    .btn.op2:hover{ background: rgba(37,99,235,0.18); border-color: rgba(37,99,235,0.44); text-decoration:none; }
+    .btn.op3{ background: var(--opBtn3Bg); border-color: var(--opBtn3Bd); color: var(--opBtn3Tx); }
+    .btn.op3:hover{ background: rgba(14,165,166,0.20); border-color: rgba(14,165,166,0.44); text-decoration:none; }
+    .btn.op4{ background: var(--opBtn4Bg); border-color: var(--opBtn4Bd); color: var(--opBtn4Tx); }
+    .btn.op4:hover{ background: rgba(14,165,166,0.14); border-color: rgba(14,165,166,0.36); text-decoration:none; }
+
+    /* Posts carousel wrapper */
+    .postsCarouselWrap{
+      position: relative;
+    }
+    .scrollBtn{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 4px 12px rgba(15,23,42,0.12);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--text);
+      transition: background .12s, box-shadow .12s, opacity .18s;
+      user-select: none;
+    }
+    .scrollBtn:hover{
+      background: rgba(255,255,255,1);
+      box-shadow: 0 6px 18px rgba(15,23,42,0.16);
+    }
+    .scrollBtn.left{ left: -14px; }
+    .scrollBtn.right{ right: -14px; }
+    .scrollBtn.hidden{ opacity: 0; pointer-events: none; }
+
+    /* Shared footer nav across all pages */
+    .pageFooter{
+      margin-top: 22px;
+      padding-top: 18px;
+      color: var(--muted2);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .list{ margin: 0; padding-left: 18px; color: var(--muted); }
+    .list li{ margin: 6px 0; }
+
+    .timeline{ display: grid; gap: 12px; margin-top: 10px; }
     .tItem{
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.92);
       padding: 14px;
+      box-shadow: 0 8px 18px rgba(15,23,42,0.06);
     }
     .tTop{
       display:flex;
@@ -244,22 +378,112 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .tTop .when{
+    .when{
       font-size: 12px;
       color: var(--muted2);
       padding: 6px 10px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.9);
     }
-    .tMeta{
-      color: var(--muted2);
-      font-size: 13px;
-      margin-top: 4px;
+    .tMeta{ color: var(--muted2); font-size: 13px; margin-top: 4px; }
+
+    .heroRow{
+      display:flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .heroPic{
+      width: 140px; height: 140px;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      background: rgba(14,165,166,0.10);
+      flex: 0 0 auto;
+    }
+    .heroPic img{
+      width:100%; height:100%;
+      object-fit: cover;
+      display:block;
     }
 
-    /* “Instagram-like” post gallery */
-    .postHeader{
+    .stack{ display: grid; gap: 14px; }
+
+    .cardPost{
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      box-shadow: var(--shadow2);
+      overflow: hidden;
+      display:flex;
+      flex-direction: column;
+    }
+
+    .cardMedia{
+      height: 190px;
+      background:
+        radial-gradient(380px 180px at 18% 25%, rgba(14,165,166,0.16), transparent 60%),
+        radial-gradient(320px 200px at 84% 30%, rgba(37,99,235,0.14), transparent 65%),
+        rgba(255,255,255,0.85);
+      border-bottom: 1px solid var(--border);
+      overflow:hidden;
+    }
+    .cardMedia img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+    .cardBody{
+      padding: 12px 14px 14px;
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+    .cardTitle{
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.25;
+      margin: 0;
+      font-weight: 700;
+    }
+    .cardText{
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      flex: 1;
+    }
+    .cardFooter{
+      margin-top: auto;
+      padding-top: 10px;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .mini{ font-size: 12px; color: var(--muted2); }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .chip{
+      font-size: 12px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--skillBd);
+      background: var(--skillBg);
+      color: var(--skillTx);
+      box-shadow: 0 6px 14px rgba(15,23,42,0.06);
+    }
+
+    .sectionHead{
       display:flex;
       align-items:flex-end;
       justify-content: space-between;
@@ -267,73 +491,7 @@
       flex-wrap: wrap;
       margin-bottom: 10px;
     }
-    .postsWrap{
-      overflow-x: auto;
-      padding-bottom: 6px;
-      scroll-snap-type: x mandatory;
-    }
-    .posts{
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(260px, 320px);
-      gap: 14px;
-      padding: 2px;
-    }
-    .post{
-      scroll-snap-align: start;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.28);
-      overflow: hidden;
-      display:flex;
-      flex-direction: column;
-      min-height: 320px;
-    }
-    .postMedia{
-      height: 180px;
-      background:
-        radial-gradient(380px 180px at 18% 25%, rgba(125,211,252,0.18), transparent 60%),
-        radial-gradient(320px 200px at 84% 30%, rgba(167,243,208,0.14), transparent 65%),
-        rgba(255,255,255,0.03);
-      border-bottom: 1px solid var(--border);
-    }
-    .postBody{
-      padding: 12px 12px 14px;
-      display:flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .postTitle{
-      font-size: 14px;
-      color: rgba(255,255,255,0.92);
-      line-height: 1.25;
-      margin: 0;
-    }
-    .postText{
-      font-size: 13px;
-      color: var(--muted);
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .postFooter{
-      margin-top: auto;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .mini{
-      font-size: 12px;
-      color: var(--muted2);
-    }
 
-    /* Footer */
     footer{
       margin-top: 22px;
       padding-top: 18px;
@@ -345,26 +503,57 @@
       gap: 10px;
       flex-wrap: wrap;
     }
-    .footLinks{ display:flex; gap: 10px; flex-wrap: wrap; }
-
-    /* Small helper */
-    .note{
-      border: 1px dashed rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.04);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--muted);
-      font-size: 13px;
+    :focus-visible{
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: 10px;
     }
+
+    .lovePurple{ background: var(--lovePurpleBg) !important; border-color: var(--lovePurpleBd) !important; }
+    .loveGreen{ background: var(--loveGreenBg) !important; border-color: var(--loveGreenBd) !important; }
+    .loveBlue{ background: var(--loveBlueBg) !important; border-color: var(--loveBlueBd) !important; }
+
+    .whiteSection{ background: #ffffff; box-shadow: var(--shadow); }
+    .researchCard{
+      background: var(--researchCardBg);
+      border-color: var(--researchCardBd);
+    }
+    .pubCard{
+      background: var(--pubCardBg);
+      border-color: var(--pubCardBd);
+    }
+
+    .contactBoxGreen{
+      background: var(--contactGreenBg) !important;
+      border-color: var(--contactGreenBd) !important;
+    }
+    .contactBoxGreen a{
+      color: var(--contactGreenTx) !important;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contactBoxGreen a:hover{ text-decoration: underline; }
+
+    .contactBoxBlue{
+      background: var(--contactBlueBg) !important;
+      border-color: var(--contactBlueBd) !important;
+    }
+    .contactBoxBlue a{
+      color: var(--contactBlueTx) !important;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contactBoxBlue a:hover{ text-decoration: underline; }
   </style>
 </head>
 
 <body>
-  <!-- Top Navigation -->
   <header class="topbar">
     <div class="topbarInner">
       <div class="brand" role="banner">
-        <div class="avatar" aria-hidden="true"></div>
+        <div class="avatar" aria-hidden="true">
+          <img alt="Natasha Yotmanee" src="https://media.licdn.com/dms/image/v2/D4E03AQHGI9a5MyIa3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730209655021?e=2147483647&t=HgT-tlrRoORyL3Ceta22UAp6S2l_dSJabJzMwwcDqoM&v=beta" />
+        </div>
         <div class="brandText">
           <strong>Natasha Yotmanee</strong>
           <span>International Relations · Data Science · Asia-Pacific</span>
@@ -372,9 +561,9 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="pill" href="#home" data-route="home">Home</a>
+        <a class="pill active" href="#home" data-route="home">Home</a>
         <a class="pill" href="#cv" data-route="cv">CV</a>
-        <a class="pill" href="#research" data-route="research">Research</a>
+        <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
         <a class="pill" href="#posts" data-route="posts">Posts</a>
         <a class="pill" href="#contact" data-route="contact">Contact</a>
       </nav>
@@ -383,589 +572,813 @@
 
   <main class="wrap" id="app">
     <!-- HOME -->
-    <section class="page" id="page-home" data-page="home">
+    <section class="page active" id="page-home" data-page="home">
       <div class="grid cols2">
-        <div class="card pad">
-          <h1>Hi — I’m Natasha Yotmanee <span class="muted">(she/her)</span>.</h1>
-          <p>
-            I’m a senior at William &amp; Mary graduating in <strong>May 2026</strong>, majoring in <strong>International Relations</strong>
-            and minoring in <strong>Data Science</strong>.
-          </p>
-          <p>
-            I’m focused on building a career dedicated to <strong>peacekeeping</strong>, <strong>conflict prevention</strong>, and
-            <strong>humanitarian aid</strong> — with a particular interest in the <strong>Asia-Pacific</strong>. I’m driven to bridge
-            technology and diplomacy by using data-driven insights and strategic thinking to support resilience and sustainable peace.
-          </p>
-
-          <div class="tagRow" aria-label="Focus areas">
-            <span class="tag accent">Peace &amp; security</span>
-            <span class="tag mint">Humanitarian &amp; development</span>
-            <span class="tag amber">Asia-Pacific policy</span>
-            <span class="tag">Data analysis</span>
-            <span class="tag">Research synthesis</span>
-          </div>
-
-          <div class="btnRow">
-            <a class="btn primary" href="#contact" data-route="contact">Contact</a>
-            <a class="btn" href="#cv" data-route="cv">View CV</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">LinkedIn ↗</a>
-          </div>
-        </div>
-
-        <aside class="grid">
+        <div class="grid">
           <div class="card pad">
-            <h2>Current direction</h2>
+            <div class="heroRow">
+              <div class="heroPic" aria-hidden="true">
+                <img alt="Natasha Yotmanee" src="https://media.licdn.com/dms/image/v2/D4E03AQHGI9a5MyIa3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730209655021?e=2147483647&t=HgT-tlrRoORyL3Ceta22UAp6S2l_dSJabJzMwwcDqoM&v=beta" />
+              </div>
+              <div>
+                <div class="kicker">International Relations · Data Science · Asia-Pacific</div>
+                <h1>Hi! I'm Natasha Yotmanee <span>(she/her)</span>.</h1>
+              </div>
+            </div>
+
             <p>
-              Seeking opportunities that blend real-world impact with analysis — especially roles connected to peacebuilding,
-              humanitarian operations, and evidence-based policy.
+              I'm a senior at William &amp; Mary graduating in <strong>May 2026</strong>, majoring in <strong>International Relations</strong>
+              and minoring in <strong>Data Science</strong>.
+            </p>
+            <p>
+              I am driven to build a career dedicated to <strong>peacekeeping</strong>, <strong>conflict prevention</strong>, and
+              <strong>humanitarian aid</strong>, focusing on promoting resilience and sustainable peace in fragile regions. Committed to advancing
+              peace, security, and development across the <strong>Asia-Pacific</strong>, I aim to bridge technology and diplomacy, using data-driven
+              insights and strategic thinking to make meaningful contributions within the region and beyond.
             </p>
           </div>
 
           <div class="card pad">
-            <h2>Quick facts</h2>
+            <h2>Current Direction</h2>
+            <p>
+              Seeking opportunities that will allow me to apply my skills in real-world settings, build meaningful connections, and prepare for a career dedicated to advancing peace and humanitarian efforts!
+            </p>
+          </div>
+
+          <div class="card pad">
+            <h2>Quick Facts</h2>
             <ul class="list">
-              <li><strong>School:</strong> William &amp; Mary (BA, International Relations; minor in Data Science)</li>
-              <li><strong>Languages:</strong> English (native), Thai (oral proficiency), Mandarin (intermediate)</li>
-              <li><strong>Tools:</strong> Python (intermediate), SQL/R (basic)</li>
-              <li><strong>Interests:</strong> food 🍲 · travel 🌎 · books 📚</li>
+              <li><strong>School:</strong> William &amp; Mary (B.A. International Relations; Minor in Data Science)</li>
+              <li><strong>Languages:</strong> English (native), Thai (oral proficiency), Mandarin Chinese (intermediate)</li>
+              <li><strong>Software:</strong> Python (intermediate), SQL (basic, developing), R (basic)</li>
             </ul>
           </div>
 
           <div class="card pad">
-            <h2>Featured experience</h2>
+            <h2>Featured Experience</h2>
             <p class="muted">
-              UNDP Crisis Bureau (Risk Anticipation Hub) communications fellow · Asia Policy Lab team lead · USAWC strategic studies intern
+              A few organizations I've worked with and learned from. Click to jump to the related section on my CV.
             </p>
             <div class="btnRow">
-              <a class="btn" href="#research" data-route="research">See research</a>
-              <a class="btn" href="#posts" data-route="posts">See posts</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-experience">W&amp;M - Department of Government ↗</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-asiapolicylab">W&amp;M - Asia Policy Lab ↗</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-undp">UNDP - Crisis Bureau ↗</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-usawc">USAWC - Strategic Studies Institute ↗</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-ewc">East-West Center in Washington ↗</a>
+              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-rte">Royal Thai Embassy &amp; US-Asia Institute ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card pad">
+          <h2>Some Things I Love:</h2>
+
+          <div class="divider"></div>
+
+          <div class="stack">
+            <div class="card pad lovePurple" style="box-shadow:none;">
+              <h3>Food 🍲</h3>
+              <p class="muted" style="margin-bottom:8px;">I'm a foodie who loves trying new places.</p>
+              <p class="muted" style="margin-bottom:6px;"><strong>Current goals before graduation:</strong></p>
+              <ul class="list">
+                <li>Try all the Thai restaurants in Williamsburg!</li>
+                <li>Try as many breakfast spots in the "Pancake Capital of the World" as I can!</li>
+              </ul>
+            </div>
+
+            <div class="card pad loveBlue" style="box-shadow:none;">
+              <h3>Travel 🌎</h3>
+              <p class="muted" style="margin-bottom:8px;">
+                I love traveling to see new places, experience culture, and learn from how people live.
+              </p>
+              <ul class="list">
+                <li>Recently traveled to 15 different cities in China!</li>
+                <li>Have been to countries across Europe, Africa, Asia, and North America!</li>
+              </ul>
+            </div>
+
+            <div class="card pad loveGreen" style="box-shadow:none;">
+              <h3>Books 📚</h3>
+              <p class="muted" style="margin-bottom:8px;">Who doesn't like to read??</p>
+              <ul class="list" style="margin-bottom:12px;">
+                <li><strong>I'm currently reading:</strong> <em>A Thousand Splendid Suns</em> by Khaled Hosseini</li>
+              </ul>
+
+              <div class="divider" style="margin:12px 0;"></div>
+
+              <h3>Movies 🎬</h3>
+              <p class="muted" style="margin-bottom:10px;">
+                We (me &amp; my roomie) are tired of watching trailers for two hours and then watching mediocre movies before going to bed on our Movie Nights. Pitch us your favorite films, hidden gems, or the "so-bad-it's-good" masterpieces!
+              </p>
+              <p class="muted" style="margin-bottom:10px;">
+                The link below is our Movie Night Suggestion Box! Thanks for the recs, and just know that if we pick yours, that means you have superior movie taste. 🍿✨
+              </p>
+              <div class="btnRow">
+                <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfqTbmzsW8QrHWum-mOJPvJSRIqS1NR0V_7xLdNfvRu9swF_w/viewform?usp=header" target="_blank" rel="noopener">Suggestion Box ↗</a>
+              </div>
+            </div>
+
+            <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.04);border-color:rgba(14,165,166,0.18);">
+              <h3>Senior Year - Bucket List 🎓</h3>
+              <p class="muted" style="margin-bottom:8px;">Time is ticking. Here are some things I'm looking forward to:</p>
+              <ul class="list">
+                <li>W&amp;M zip line (I didn't even know we had one)</li>
+                <li>Natasha Bedingfield &amp; B.o.B concert!</li>
+                <li>Visit Muscarelle Museum and W&amp;M Archives/Special Collections</li>
+                <li>Explore W&amp;M underground tunnels and crypt??</li>
+              </ul>
             </div>
           </div>
         </aside>
       </div>
+      <footer>
+        <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
+        </div>
+      </footer>
     </section>
 
     <!-- CV -->
     <section class="page" id="page-cv" data-page="cv">
       <div class="card pad">
-        <h1>Curriculum Vitae</h1>
-        <p class="muted">A formatted, readable version of your CV (static text for easy GitHub hosting).</p>
-
-        <div class="divider"></div>
-
-        <h2>Education</h2>
-        <div class="timeline">
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>William &amp; Mary — Williamsburg, VA</h3>
-                <div class="tMeta">B.A. International Relations · Minor: Data Science · <strong>Expected May 2026</strong></div>
-              </div>
-              <div class="when">2022–2026</div>
-            </div>
-            <ul class="list">
-              <li><strong>Senior Capstone:</strong> “Why States Hedge Differently: Systemic Pressures &amp; Domestic Constraints in Southeast Asia.”</li>
-              <li><strong>Relevant coursework:</strong> Development: Theory and Practice · Public Policy · Politics &amp; Policy of International Organizations · Databases · Data Visualization · Data Science</li>
-            </ul>
+        <div class="sectionHead">
+          <div>
+            <h1>Curriculum Vitae</h1>
+            <p class="muted">Education, experience, research contributions, programs &amp; awards, and skills.</p>
           </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Tsinghua University (清华大学) — Beijing, China</h3>
-                <div class="tMeta">Exchange semester</div>
-              </div>
-              <div class="when">Feb–Jun 2025</div>
-            </div>
-          </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Beijing Language and Culture University (北京语言大学) — Beijing, China</h3>
-                <div class="tMeta">Summer language program</div>
-              </div>
-              <div class="when">Jun–Aug 2025</div>
-            </div>
+          <div class="btnRow">
+            <a class="btn ghost" href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
           </div>
         </div>
 
         <div class="divider"></div>
 
-        <h2>Professional &amp; Research Experience</h2>
-        <div class="timeline">
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Research Assistant — Department of Government, William &amp; Mary</h3>
-                <div class="tMeta"><strong>Project:</strong> Politics of Recognition and the Case of One China</div>
+        <section id="cv-education">
+          <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+            <h2>Education</h2>
+            <div class="timeline">
+              <div class="tItem">
+                <div class="tTop">
+                  <div>
+                    <h3>William &amp; Mary - Williamsburg, VA</h3>
+                    <div class="tMeta">B.A. International Relations · Minor: Data Science · <strong>Expected May 2026</strong></div>
+                  </div>
+                  <div class="when">2022–2026</div>
+                </div>
+                <ul class="list">
+                  <li><strong>Senior Capstone:</strong> "Why States Hedge Differently: Systemic Pressures &amp; Domestic Constraints in Southeast Asia."</li>
+                </ul>
               </div>
-              <div class="when">Feb 2026–Present</div>
-            </div>
-            <ul class="list">
-              <li>Support analysis and data modeling of a cross-national dataset on diplomatic recognition patterns (1945–1991), examining conditions under which newly decolonized states recognized the PRC vs. ROC.</li>
-              <li>Assist with data preparation, review, and documentation to support comparative research.</li>
-              <li>Contribute to literature review and synthesis on recognition and institutional decision-making.</li>
-              <li>Collaborate with faculty/peers on research tasks and deliverables.</li>
-            </ul>
-          </div>
 
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Team Leader — Asia Policy Lab, William &amp; Mary</h3>
-                <div class="tMeta"><strong>Project:</strong> Storied States</div>
+              <div class="tItem">
+                <div class="tTop">
+                  <div>
+                    <h3>Tsinghua University (清华大学) - Beijing, China</h3>
+                    <div class="tMeta">Exchange semester</div>
+                  </div>
+                  <div class="when">Feb–Jun 2025</div>
+                </div>
               </div>
-              <div class="when">Aug 2025–Jan 2026</div>
-            </div>
-            <ul class="list">
-              <li>Selected as 1 of 13 undergraduates for a competitive faculty-led research program contributing to scholarly and applied projects.</li>
-              <li>Led a 3-person team coding political speeches from Taiwan and South Korea; coordinated timelines and quality control.</li>
-              <li>Designed and applied a structured coding framework for a comparative archival dataset (~500 documents); cleaned/standardized a 260-document subset of Taiwanese speeches.</li>
-              <li>Conducted sentence-level analysis of elite political discourse in Taiwan across democratization periods.</li>
-            </ul>
-          </div>
 
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Communications Fellow — UNDP Crisis Bureau (Risk Anticipation Hub)</h3>
-                <div class="tMeta">New York, NY</div>
+              <div class="tItem">
+                <div class="tTop">
+                  <div>
+                    <h3>Beijing Language and Culture University (北京语言大学) - Beijing, China</h3>
+                    <div class="tMeta">Summer language program</div>
+                  </div>
+                  <div class="when">Jun–Aug 2025</div>
+                </div>
               </div>
-              <div class="when">May–Aug 2024</div>
             </div>
-            <ul class="list">
-              <li>Supported internal communications products to improve visibility/accessibility of analytical work.</li>
-              <li>Drafted/refined proposals and content for newsletters and internal channels.</li>
-              <li>Developed standardized presentation templates for consistent messaging and branding.</li>
-            </ul>
           </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Ukraine War Study Intern — Strategic Studies Institute, U.S. Army War College</h3>
-                <div class="tMeta">Carlisle, PA</div>
-              </div>
-              <div class="when">Jan 2023–Apr 2024</div>
-            </div>
-            <ul class="list">
-              <li>Conducted literature reviews and cataloged interview notes supporting an unclassified monograph on the war in Ukraine.</li>
-              <li>Researched security cooperation and early U.S. defense funding/assistance to support contextual and institutional analysis.</li>
-              <li>Synthesized findings into briefs and presented recommendations to internal briefing teams supporting senior officials.</li>
-            </ul>
-          </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>Young Professionals Program — East-West Center in Washington</h3>
-                <div class="tMeta">Washington, D.C.</div>
-              </div>
-              <div class="when">Jun–Aug 2023</div>
-            </div>
-            <ul class="list">
-              <li>Researched U.S.-ASEAN relations and co-edited <em>ASEAN Matters for America</em>.</li>
-              <li>Authored/published three articles for the Asia Matters for America platform on U.S.-Asia relations and regional developments.</li>
-              <li>Produced internal reports on Indo-Pacific events and U.S. government priorities.</li>
-            </ul>
-          </div>
-
-          <div class="tItem">
-            <div class="tTop">
-              <div>
-                <h3>TANIP Participant — Royal Thai Embassy &amp; US-Asia Institute</h3>
-                <div class="tMeta">Washington, D.C.</div>
-              </div>
-              <div class="when">Jun–Aug 2023</div>
-            </div>
-            <ul class="list">
-              <li>Selected as one of five participants in a competitive national program providing exposure to U.S. government institutions.</li>
-              <li>Researched and presented a cybersecurity policy memo on rising cybercrime in Thailand.</li>
-              <li>Supported public communications, including standardized materials and coordination with media partners.</li>
-            </ul>
-          </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
 
-        <div class="grid cols2">
-          <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,0.04);">
-            <h2>Publications</h2>
-            <ul class="list">
-              <li>Yotmanee, N. “Japan, &amp; Taiwan Donate to Maui,” <em>Asia Matters for America</em>, East-West Center (2023).</li>
-              <li>Yotmanee, N. “Eden Center Redevelopment Plan Approved,” <em>Asia Matters for America</em>, East-West Center (2023).</li>
-              <li>Maga, J., and Yotmanee, N. “Sawasdee Festival: Celebrating the 190th Anniversary of US-Thai Relations,” <em>Asia Matters for America</em>, East-West Center (2023).</li>
-            </ul>
-          </div>
+        <section id="cv-experience">
+          <div class="card pad" style="box-shadow:none;background:rgba(37,99,235,0.06);border-color:rgba(37,99,235,0.20);">
+            <h2>Professional &amp; Research Experience</h2>
+            <div class="timeline">
 
-          <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,0.04);">
-            <h2>Research contributions &amp; awards</h2>
-            <ul class="list">
-              <li><strong>Research contributor/co-editor:</strong> <em>ASEAN Matters for America / America Matters for ASEAN</em> (6th ed.), East-West Center (2023).</li>
-              <li><strong>Internal study contributor:</strong> “Crisis in the Caucasus: Invasion of Georgia, 2008–2014.” Strategic Studies Institute, USAWC (2024) — prepared for a forthcoming monograph on partner capacity in Ukraine.</li>
-              <li><strong>Gates Scholarship:</strong> Reves Center for International Studies, W&amp;M (Feb–Jun 2025) — $7,500 study abroad award.</li>
-              <li><strong>Global Scholars Program:</strong> Global Research Institute, W&amp;M (Aug 2023–2024) — selected as 1 of 18.</li>
-            </ul>
+              <div class="tItem" id="cv-deptgov">
+                <div class="tTop">
+                  <div>
+                    <h3>Research Assistant - Department of Government, William &amp; Mary</h3>
+                    <div class="tMeta"><strong>Project:</strong> Politics of Recognition and the Case of One China</div>
+                  </div>
+                  <div class="when">Feb 2026–Present</div>
+                </div>
+                <ul class="list">
+                  <li>Support analysis and data modeling of a cross-national dataset on diplomatic recognition patterns (1945–1991), examining conditions under which newly decolonized states recognized the PRC vs. ROC.</li>
+                  <li>Assist with data preparation, review, and documentation to support comparative research.</li>
+                  <li>Contribute to literature review and synthesis on recognition and institutional decision-making.</li>
+                  <li>Collaborate with faculty/peers on research tasks and deliverables.</li>
+                </ul>
+              </div>
+
+              <div class="tItem" id="cv-asiapolicylab">
+                <div class="tTop">
+                  <div>
+                    <h3>Team Leader - Asia Policy Lab, William &amp; Mary</h3>
+                    <div class="tMeta"><strong>Project:</strong> Storied States</div>
+                  </div>
+                  <div class="when">Aug 2025–Jan 2026</div>
+                </div>
+                <ul class="list">
+                  <li>Selected as 1 of 13 undergraduates for a competitive faculty-led research program contributing to scholarly and applied projects.</li>
+                  <li>Led a 3-person team coding political speeches from Taiwan and South Korea; coordinated timelines and quality control.</li>
+                  <li>Designed and applied a structured coding framework for a comparative archival dataset (~500 documents); cleaned/standardized a 260-document subset of Taiwanese speeches.</li>
+                  <li>Conducted sentence-level analysis of elite political discourse in Taiwan across democratization periods.</li>
+                </ul>
+              </div>
+
+              <div class="tItem" id="cv-undp">
+                <div class="tTop">
+                  <div>
+                    <h3>Communications Fellow - UNDP Crisis Bureau (Risk Anticipation Hub)</h3>
+                    <div class="tMeta">New York, NY</div>
+                  </div>
+                  <div class="when">May–Aug 2024</div>
+                </div>
+                <ul class="list">
+                  <li>Supported internal communications products to improve visibility/accessibility of analytical work.</li>
+                  <li>Drafted/refined proposals and content for newsletters and internal channels.</li>
+                  <li>Developed standardized presentation templates for consistent messaging and branding.</li>
+                </ul>
+              </div>
+
+              <div class="tItem" id="cv-usawc">
+                <div class="tTop">
+                  <div>
+                    <h3>Ukraine War Study Intern - Strategic Studies Institute, U.S. Army War College</h3>
+                    <div class="tMeta">Carlisle, PA</div>
+                  </div>
+                  <div class="when">Jan 2023–Apr 2024</div>
+                </div>
+                <ul class="list">
+                  <li>Conducted literature reviews and cataloged interview notes supporting an unclassified monograph on the war in Ukraine.</li>
+                  <li>Researched security cooperation and early U.S. defense funding/assistance to support contextual and institutional analysis.</li>
+                  <li>Synthesized findings into briefs and presented recommendations to internal briefing teams supporting senior officials.</li>
+                </ul>
+              </div>
+
+              <div class="tItem" id="cv-ewc">
+                <div class="tTop">
+                  <div>
+                    <h3>Young Professionals Program - East-West Center in Washington</h3>
+                    <div class="tMeta">Washington, D.C.</div>
+                  </div>
+                  <div class="when">Jun–Aug 2023</div>
+                </div>
+                <ul class="list">
+                  <li>Researched U.S.-ASEAN relations and co-edited <em>ASEAN Matters for America</em>.</li>
+                  <li>Authored/published three articles for the Asia Matters for America platform on U.S.-Asia relations and regional developments.</li>
+                  <li>Produced internal reports on Indo-Pacific events and U.S. government priorities.</li>
+                </ul>
+              </div>
+
+              <div class="tItem" id="cv-rte">
+                <div class="tTop">
+                  <div>
+                    <h3>TANIP Participant - Royal Thai Embassy &amp; US-Asia Institute</h3>
+                    <div class="tMeta">Washington, D.C.</div>
+                  </div>
+                  <div class="when">Jun–Aug 2023</div>
+                </div>
+                <ul class="list">
+                  <li>Selected as one of five participants in a competitive national program providing exposure to U.S. government institutions.</li>
+                  <li>Researched and presented a cybersecurity policy memo on rising cybercrime in Thailand.</li>
+                  <li>Supported public communications, including standardized materials and coordination with media partners.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
-        </div>
+        </section>
 
         <div class="divider"></div>
 
-        <h2>Skills</h2>
-        <div class="tagRow">
-          <span class="tag">Python (intermediate)</span>
-          <span class="tag">SQL (basic)</span>
-          <span class="tag">R (basic)</span>
-          <span class="tag accent">Research synthesis</span>
-          <span class="tag mint">Policy writing</span>
-          <span class="tag amber">Data documentation</span>
-          <span class="tag">English (native)</span>
-          <span class="tag">Thai (oral proficiency)</span>
-          <span class="tag">Mandarin (intermediate)</span>
-        </div>
+        <section id="cv-contrib-awards">
+          <div class="grid cols2even">
+            <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+              <h2>Research Contributions</h2>
+
+              <div class="tItem" style="box-shadow:none;">
+                <p class="cardTitle" style="margin:0 0 6px;"><strong>ASEAN Matters for America / America Matters for ASEAN (6th ed.)</strong></p>
+                <p class="muted" style="margin:0 0 8px;">
+                  A regional overview of U.S.–ASEAN ties covering key trends in diplomacy, security, economics, and people-to-people connections.
+                </p>
+                <p class="muted" style="margin:0 0 10px;">
+                  <strong>Research contributor/co-editor:</strong> <em>ASEAN Matters for America / America Matters for ASEAN</em> (6th ed.), East-West Center (2023).
+                </p>
+                <div class="btnRow">
+                  <a class="btn" href="https://asiamattersforamerica.org/uploads/publications/2023-ASEAN-Matters-for-America.pdf" target="_blank" rel="noopener">ASEAN PDF ↗</a>
+                </div>
+              </div>
+
+              <div class="tItem" style="box-shadow:none;">
+                <p class="cardTitle" style="margin:0 0 6px;"><strong>Crisis in the Caucasus: Invasion of Georgia (2008–2014)</strong></p>
+                <p class="muted" style="margin:0 0 8px;">
+                  A case study on the Russo–Georgian war and its aftermath, focusing on escalation dynamics, regional security, and strategic implications.
+                </p>
+                <p class="muted" style="margin:0 0 10px;">
+                  <strong>Internal study contributor:</strong> "Crisis in the Caucasus: Invasion of Georgia, 2008–2014." Strategic Studies Institute, USAWC (2024) - prepared for a forthcoming monograph on partner capacity in Ukraine.
+                </p>
+              </div>
+            </div>
+
+            <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+              <h2>Programs &amp; Awards</h2>
+
+              <div class="tItem" style="box-shadow:none;">
+                <p class="cardTitle" style="margin:0 0 6px;"><strong>Global Scholars Program</strong></p>
+                <p class="muted" style="margin:0 0 8px;">
+                  An intensive cohort program combining policy-focused learning with professional development through site visits and practitioner engagement.
+                </p>
+                <p class="muted" style="margin:0 0 10px;">
+                  <strong>Global Scholars Program:</strong> Global Research Institute, W&amp;M (Aug 2023–2024) - selected as 1 of 18.
+                </p>
+                <div class="btnRow">
+                  <a class="btn" href="https://www.wm.edu/offices/dccenter/opportunities/gsp/gsp-alumni/23-24scholars/" target="_blank" rel="noopener">GSP Page ↗</a>
+                </div>
+              </div>
+
+              <div class="tItem" style="box-shadow:none;">
+                <p class="cardTitle" style="margin:0 0 6px;"><strong>Gates Scholarship</strong></p>
+                <p class="muted" style="margin:0 0 8px;">
+                  A study-abroad scholarship supporting global learning and academic immersion through the Reves Center for International Studies.
+                </p>
+                <p class="muted" style="margin:0 0 10px;">
+                  <strong>Gates Scholarship:</strong> Reves Center for International Studies, W&amp;M (Feb–Jun 2025) - $7,500 study abroad award.
+                </p>
+                <div class="btnRow">
+                  <a class="btn" href="https://studyabroad.wm.edu/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=2659" target="_blank" rel="noopener">Program Page ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="cv-skills">
+          <h2>Skills (Languages)</h2>
+          <p class="muted" style="margin-bottom:8px;">Software and languages I use for research, analysis, and communication.</p>
+
+          <div class="chips" aria-label="Skills">
+            <span class="chip">Python (intermediate)</span>
+            <span class="chip">SQL (basic, developing)</span>
+            <span class="chip">R (basic)</span>
+            <span class="chip">English (native)</span>
+            <span class="chip">Thai (oral proficiency)</span>
+            <span class="chip">Mandarin Chinese (intermediate)</span>
+          </div>
+        </section>
       </div>
+      <footer>
+        <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
+        </div>
+      </footer>
     </section>
 
-    <!-- RESEARCH -->
+    <!-- RESEARCH & PUBLICATIONS -->
     <section class="page" id="page-research" data-page="research">
       <div class="grid cols2">
-        <div class="card pad">
-          <h1>Research &amp; Projects</h1>
-          <p class="muted">
-            Current and recent work, including China-focused experiences and related publications.
-          </p>
-
-          <div class="divider"></div>
-
-          <h2>Current research</h2>
-          <div class="timeline">
-            <div class="tItem">
-              <div class="tTop">
-                <div>
-                  <h3>Politics of Recognition &amp; the Case of One China</h3>
-                  <div class="tMeta">William &amp; Mary · Department of Government</div>
-                </div>
-                <div class="when">Feb 2026–Present</div>
-              </div>
-              <ul class="list">
-                <li>Cross-national dataset (1945–1991) on diplomatic recognition and conditions shaping recognition of PRC vs. ROC among newly decolonized states.</li>
-                <li>Data modeling, preparation, documentation, and literature review support.</li>
-              </ul>
-              <div class="tagRow">
-                <span class="tag accent">Diplomatic recognition</span>
-                <span class="tag">Comparative politics</span>
-                <span class="tag mint">Data modeling</span>
-              </div>
-            </div>
-
-            <div class="tItem">
-              <div class="tTop">
-                <div>
-                  <h3>Storied States (Asia Policy Lab)</h3>
-                  <div class="tMeta">Coding and analysis of elite political discourse</div>
-                </div>
-                <div class="when">Aug 2025–Jan 2026</div>
-              </div>
-              <ul class="list">
-                <li>Led a team coding political speeches from Taiwan and South Korea; created a structured coding framework.</li>
-                <li>Cleaned/standardized a 260-document subset and supported comparative analysis across democratization periods.</li>
-              </ul>
-              <div class="tagRow">
-                <span class="tag">Political speech analysis</span>
-                <span class="tag mint">Qualitative coding</span>
-                <span class="tag amber">Archival datasets</span>
-              </div>
+        <div class="card pad whiteSection">
+          <div class="sectionHead">
+            <div>
+              <h1>Research &amp; Publications</h1>
+              <p class="muted">Current research and selected writing.</p>
             </div>
           </div>
 
           <div class="divider"></div>
 
-          <h2>China-related work &amp; study</h2>
-          <div class="timeline">
-            <div class="tItem">
-              <div class="tTop">
-                <div>
-                  <h3>Exchange Semester — Tsinghua University (清华大学), Beijing</h3>
-                  <div class="tMeta">Academic study in China</div>
-                </div>
-                <div class="when">Feb–Jun 2025</div>
-              </div>
-            </div>
+          <h2>Current Research</h2>
 
-            <div class="tItem">
-              <div class="tTop">
-                <div>
-                  <h3>Summer Language Program — BLCU (北京语言大学), Beijing</h3>
-                  <div class="tMeta">Mandarin Chinese language immersion</div>
+          <div class="stack">
+            <article class="cardPost researchCard">
+              <div class="cardBody">
+                <p class="cardTitle">Politics of Recognition and the Case of One China</p>
+                <p class="cardText">
+                  Analyze an original dataset of diplomatic recognition patterns between 1945–1991, studying the conditions under which newly decolonized states opted to recognize either the People's Republic of China (PRC) versus Republic of China (ROC).
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">William &amp; Mary · Department of Government</span>
+                  <a class="btn rc" href="#cv" data-route="cv" data-scrolltarget="cv-experience">View in CV ↗</a>
                 </div>
-                <div class="when">Jun–Aug 2025</div>
               </div>
-            </div>
+            </article>
+
+            <article class="cardPost researchCard">
+              <div class="cardBody">
+                <p class="cardTitle">Storied States (Asia Policy Lab)</p>
+                <p class="cardText">
+                  Selected as 1 of 13 undergraduates for a competitive faculty-led research program contributing to a professor-led scholarly and applied research project analyzing changes in elite political discourse in Taiwan and South Korea across different democratization periods.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">William &amp; Mary · Asia Policy Lab</span>
+                  <a class="btn rc" href="#cv" data-route="cv" data-scrolltarget="cv-asiapolicylab">View in CV ↗</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
 
-        <aside class="grid">
-          <div class="card pad">
-            <h2>Selected publications</h2>
-            <p class="muted">Writing and reporting on U.S.–Asia relations and regional developments.</p>
-            <ul class="list">
-              <li>“Japan, &amp; Taiwan Donate to Maui,” <em>Asia Matters for America</em> (EWC, 2023)</li>
-              <li>“Eden Center Redevelopment Plan Approved,” <em>Asia Matters for America</em> (EWC, 2023)</li>
-              <li>“Sawasdee Festival: Celebrating the 190th Anniversary of US-Thai Relations,” <em>Asia Matters for America</em> (EWC, 2023)</li>
-            </ul>
-            <div class="btnRow">
-              <a class="btn" href="#posts" data-route="posts">See LinkedIn posts</a>
-              <a class="btn ghost" href="#cv" data-route="cv">Full CV</a>
-            </div>
-          </div>
+        <aside class="card pad whiteSection">
+          <h2>Selected Publications</h2>
+          <p class="muted">Articles published on Asia Matters for America (East-West Center).</p>
 
-          <div class="card pad">
-            <h2>Work style</h2>
-            <ul class="list">
-              <li><strong>Clear deliverables:</strong> memos, briefs, slide outlines, annotated bibliographies</li>
-              <li><strong>Evidence-first:</strong> transparent sourcing, careful claims, reproducible notes</li>
-              <li><strong>Practical:</strong> decision-ready insights, not just summaries</li>
-            </ul>
-          </div>
+          <div class="divider"></div>
 
-          <div class="card pad">
-            <h2>Want this section to be richer?</h2>
-            <p class="muted">
-              If you paste your “China work” notes or a publications list beyond what’s in your CV, I can expand this into a fuller
-              projects portfolio (methods, outputs, datasets, links).
-            </p>
+          <div class="stack" aria-label="Publications list">
+            <article class="cardPost pubCard">
+              <div class="cardBody">
+                <p class="cardTitle"><strong>South Korea, Japan, &amp; Taiwan Donate to Maui</strong></p>
+                <p class="cardText">Coverage of international support and regional ties following the Maui wildfires.</p>
+                <div class="cardFooter">
+                  <span class="mini">Asia Matters for America</span>
+                  <a class="btn" href="https://asiamattersforamerica.org/articles/south-korea-japan-taiwan-donate-to-maui" target="_blank" rel="noopener">Open Article ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cardPost pubCard">
+              <div class="cardBody">
+                <p class="cardTitle"><strong>Eden Center Redevelopment Plan Approved</strong></p>
+                <p class="cardText">Reporting on a major community redevelopment and its local significance.</p>
+                <div class="cardFooter">
+                  <span class="mini">Asia Matters for America</span>
+                  <a class="btn" href="https://asiamattersforamerica.org/articles/eden-center-redevelopment-plan-approved" target="_blank" rel="noopener">Open Article ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cardPost pubCard">
+              <div class="cardBody">
+                <p class="cardTitle"><strong>Sawasdee Festival: Celebrating the 190th Anniversary of US-Thai Relations</strong></p>
+                <p class="cardText">Highlights from a cultural festival marking a milestone in U.S.–Thai relations.</p>
+                <div class="cardFooter">
+                  <span class="mini">Asia Matters for America</span>
+                  <a class="btn" href="https://asiamattersforamerica.org/articles/sawasdee-festival-celebrating-the-190th-anniversary-of-us-thai-relations" target="_blank" rel="noopener">Open Article ↗</a>
+                </div>
+              </div>
+            </article>
           </div>
         </aside>
       </div>
+      <footer>
+        <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
+        </div>
+      </footer>
     </section>
 
-    <!-- POSTS -->
+    <!-- POSTS — only this section was changed -->
     <section class="page" id="page-posts" data-page="posts">
       <div class="card pad">
-        <div class="postHeader">
+        <div class="sectionHead">
           <div>
             <h1>LinkedIn Posts</h1>
-            <p class="muted">A scrollable gallery (Instagram-style) linking to your posts.</p>
           </div>
           <div class="btnRow">
-            <button class="btn" id="toggleCaptionsBtn" type="button">Toggle captions</button>
-            <a class="btn ghost" href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">Open LinkedIn ↗</a>
+            <button class="btn ghost" id="toggleCaptionsBtn" type="button">Mini Summary (on)</button>
+            <a class="btn ghost" href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
           </div>
         </div>
 
         <div class="divider"></div>
 
-        <!-- FIXED STRUCTURE: postsWrap -> postsGrid -> articles -> close postsGrid -> close postsWrap -->
-        <div class="postsWrap" aria-label="LinkedIn post gallery (horizontal scroll)">
-          <div class="posts" id="postsGrid">
+        <div class="postsCarouselWrap">
+          <button class="scrollBtn left hidden" id="scrollLeft" aria-label="Scroll left">&#8249;</button>
+          <button class="scrollBtn right" id="scrollRight" aria-label="Scroll right">&#8250;</button>
+          <div style="overflow-x:auto; padding-bottom: 6px; scroll-snap-type:x mandatory;" id="postsScroller">
+          <div style="display:grid; grid-auto-flow:column; grid-auto-columns:minmax(260px, 320px); gap:14px; padding:2px;" id="postsGrid">
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">And I’m back!</p>
-                <p class="postText caption">
-                  And I’m back! After six unforgettable months studying abroad in Beijing, I’m finally back in the US! I spent four months as an exchange student at Tsinghua University and when I realized my language skills weren’t improving as much as I wanted, I decided to stay longer and spend the summer studying Mandarin Chinese at Beijing Language and Culture University.<br><br>
-                  During my time in China, I traveled to about 15 cities where I tried regional cuisines, stood in centuries-old temples, and experienced the mix of ancient history with rapid modern development in each place I traveled to. But what truly made this study abroad journey so special were the people: classmates who made the classroom so much more enjoyable and friends I shared countless memories with.<br><br>
-                  From late-night sweet treat runs to Mixue, to discovering new restaurants, and exploring Beijing and beyond, you all made my time in China truly unforgettable. Two years ago, a mentor told me not to hold myself back because of “what ifs” and that advice is what ultimately pushed me to go to China in the first place. It reminded me to take risks now, while I still can, and to create the stories I’ll be telling for years to come.<br><br>
-                  Stories of the adventures, friendships, and unexpected moments that made this chapter of my life so much more meaningful. While my Beijing chapter has come to a close, I’m so excited to see what’s next as I enter my final year of university! So until next time, Beijing. 再见北京，谢谢你带给我的一切! And for the song I heard more times in China these past six months than I ever had before: it feels good to be back home, to the place where I belong, Virginia (not West Virginia lol).
+            <!-- POST 1 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D4E22AQE18Gx_2rJWsA/feedshare-shrink_800/B4EZmHDKMoHIAo-/0/1758907377984?e=1773878400&v=beta&t=X0vG5mquS3Wz5A__GJaMyZMEGAvyd_EiCmIiybejTiU" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">And I'm back!</p>
+                <p class="cardText caption">
+                  A reflection on six months in Beijing: studying at Tsinghua, continuing Mandarin at BLCU, traveling to about 15 cities, and the friendships and unexpected moments that made the experience unforgettable.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Natasha Yotmanee</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/natashayotmanee_and-im-back-after-six-unforgettable-activity-7377392265792524288-ido-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_and-im-back-after-six-unforgettable-activity-7377392265792524288-ido-" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">Happy February!</p>
-                <p class="postText caption">
-                  Happy February! Reflecting on the past year, I am incredibly grateful for the experiences, friendships, and mentorships that have shaped my journey. Through the Global Scholars Program, I had the opportunity to study and visit key sites in Washington D.C., Brussels, and Paris, gaining invaluable insights along the way. I am especially thankful for the mentors who guided me throughout this program (Gay Hee Lee &amp; Jimmy Z. Z.) and for the unwavering support from the William &amp; Mary Global Research Institute and the W&amp;M Washington Center — with a special thanks to Mike Tierney, David Trichler, Erin Battle, Kira Allmann, Ph.D., and our TA, Katelyn Oxer.<br><br>
-                  This program was truly a transformative experience, shaping both my academic and professional journey! I was also honored to conclude the program with a fellowship at the UNDP Risk Anticipation Hub, where I had the opportunity to gain hands-on experience and collaborate with inspiring individuals. A heartfelt thank you to everyone on the RAH Team and at the Crisis Bureau who made this experience so meaningful! ✨ Additionally, this past spring, I completed my internship with Michael E. Lynch, PhD, contributing to a study on the Ukraine war. I am deeply grateful for his guidance, mentorship, and invaluable advice throughout the internship and beyond.<br><br>
-                  What’s next for me? I’m beyond excited to share that I have been accepted as an exchange student at Tsinghua University in Beijing, China! ✈️ I am also deeply honored to be a recipient of the prestigious Gates Scholarship. My heartfelt gratitude goes to The Honorable Robert M. Gates and Becky Gates for their generosity and unwavering commitment to supporting students in their academic pursuits. As I step into this next chapter, I look forward to learning, growing, and embracing new challenges. And if anyone happens to be in Beijing, please feel free to reach out, as I’d love to grab a meal and chat! :) Wishing everyone a fantastic year ahead!
+            <!-- POST 2 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D4E22AQH_z7HG9vcQeg/feedshare-shrink_2048_1536/B4EZTG7FUIGgAo-/0/1738504175464?e=1773878400&v=beta&t=KO7RFi05X4AmD_gB6uH4Id0qM4vvb6VFAL-XOZl_C8E" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Happy February!</p>
+                <p class="cardText caption">
+                  Reflecting on a year of growth through the Global Scholars Program, a UNDP fellowship, and Ukraine-war research, plus excitement for an exchange at Tsinghua University and receiving the Gates Scholarship.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Natasha Yotmanee</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/natashayotmanee_happy-february-reflecting-on-the-past-activity-7291815029211815936-8Zhu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op2" href="https://www.linkedin.com/posts/natashayotmanee_happy-february-reflecting-on-the-past-activity-7291815029211815936-8Zhu" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">International Day of Women in Diplomacy</p>
-                <p class="postText caption">
-                  As we celebrate International Day of Women in Diplomacy, I am excited to share that I have begun my fellowship with UNDP Crisis Bureau’s Risk Anticipation Hub in NYC. I would like to thank Erin Battle, Corrado Scognamillo, and everyone involved in my hiring process for giving me this opportunity! Looking forward to making the most out of this summer! #UNDP #CrisisBureau #Fellow
+            <!-- POST 3 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQFjKwXSV2vFkg/feedshare-shrink_800/feedshare-shrink_800/0/1719245027621?e=1773878400&v=beta&t=UuiG9bcq859Zd2EyQsZvR4oOSZkylHwZ5j27d5ZWHC8" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">International Day of Women in Diplomacy</p>
+                <p class="cardText caption">
+                  Announcing the start of a fellowship with UNDP Crisis Bureau's Risk Anticipation Hub in NYC, with thanks to the team and mentors who made the opportunity possible.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Natasha Yotmanee</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/natashayotmanee_undp-crisisbureau-fellow-activity-7211036309379796992-m9Ke?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op3" href="https://www.linkedin.com/posts/natashayotmanee_undp-crisisbureau-fellow-activity-7211036309379796992-m9Ke" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">The Griffin has Landed (in Brussels)</p>
-                <p class="postText caption">
-                  The Griffin has Landed (in Brussels) and taken off again (to Paris). Students in William &amp; Mary's Global Scholars Program have spent four days in Brussels eating waffles, and mussels, and visiting the European Union, Ukraine's Ambassador to the EU, Vsevolod Chentsov, Kelly Adams-Smith at the U.S. Mission to the EU, and visiting NATO HQ on the day that Sweden's flag was raised as a new member.<br><br>
-                  We met dozens of experts on AI/Tech Policy, space policy, the war in Ukraine, and the impact of regulations on private companies and consumers. We are all grateful for the work of Alexandre Pouille for helping to organize an alumni reception so students could meet folks working in Europe. A real highlight was visiting Sarah A. Cramsey who put our contemporary conversations into historical perspective all while opening her home to 20 starving students, and showing that some alums still remember all the words to the Alma Mater! CC Speakers: Trevor H. Rudolph, Michael Koplovsky, Elisabeth Laird, Michelle Hermes, Shanley Pinchotti, Caroline Bollars, Kira Allmann, Ph.D. Next: The City of Lights.<br><br>
-                  If you are in Paris tonight, join us for a reception at 6pm.
+            <!-- POST 4 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQE4_4eXDho4kg/feedshare-shrink_1280/feedshare-shrink_1280/0/1710329379123?e=1773878400&v=beta&t=tPW6JygIXc2mIf6L7OI0J1Qd_02dE_3NtFDNYzu1-Ag" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">The Griffin has Landed (in Brussels)</p>
+                <p class="cardText caption">
+                  W&amp;M Global Scholars visited the EU, NATO HQ, and Ukraine's Ambassador in Brussels — covering AI policy, space, and the war in Ukraine — before heading to Paris.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Shared</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/mike-tierney-694a3856_the-griffin-has-landed-in-brussels-and-ugcPost-7173641420556152832-mH67?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/mike-tierney-694a3856_the-griffin-has-landed-in-brussels-and-ugcPost-7173641420556152832-mH67" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">Visited Norfolk Naval Base</p>
-                <p class="postText caption">
-                  My Global Scholars Cohort and I recently visited Norfolk Naval Base to meet with the flight instructors for the Naval Air Force Atlantic Base and NATO Allied Command. Talking with everyone was interesting and delightful. I cannot wait to continue learning about NATO and other international organizations with my fellow GSP students in Paris and Brussels.
+            <!-- POST 5 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQFPpEJ4HaPvWg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1709566043381?e=1773878400&v=beta&t=CqBMRtgWat4v-VHzw9jDTr01S2t3pmE0RD4XYj9AEx8" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Visited Norfolk Naval Base</p>
+                <p class="cardText caption">
+                  The Global Scholars cohort visited Norfolk Naval Base to meet with Naval Air Force Atlantic and NATO Allied Command instructors ahead of the Brussels and Paris trip.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Shared</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/kaleea-korunka_my-global-scholars-cohort-and-i-recently-ugcPost-7170439711038136321-aXQt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/kaleea-korunka_my-global-scholars-cohort-and-i-recently-ugcPost-7170439711038136321-aXQt" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">Global Scholars Program in DC</p>
-                <p class="postText caption">
-                  For the past 2 weeks, William &amp; Mary students in our Global Scholars Program have been in DC exploring ideas learned in the classroom. This program is an integrated part of a liberal arts education with a strong side order of professional development. I was there for two days covering the intersection of U.S. foreign policy and international organizations. Hard to keep up with these students.<br><br>
-                  We visited United States Senate Committee on Foreign Relations, The World Bank, BASF, and The White House. Thanks to the W&amp;M Washington Center, William and Mary Alumni Association, and all the practitioners who met with our class. Can't wait for Spring Break when we take the show on the road to Brussels and Paris.
+            <!-- POST 6 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D4E22AQEFesDCvjyVcQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1705784311057?e=1773878400&v=beta&t=H5PfaPLTvko0Bn7i5Se9aLFgSX2Pz5cLO50g75CqAME" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Global Scholars Program in DC</p>
+                <p class="cardText caption">
+                  Two weeks in Washington D.C. with W&amp;M Global Scholars: visits to the Senate Foreign Relations Committee, World Bank, BASF, and the White House, connecting classroom learning to U.S. foreign policy.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Shared</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/mike-tierney-694a3856_for-the-past-2-weeks-william-mary-students-ugcPost-7154577984773832704-W3qa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op2" href="https://www.linkedin.com/posts/mike-tierney-694a3856_for-the-past-2-weeks-william-mary-students-ugcPost-7154577984773832704-W3qa" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">Sasha Baker spoke with Global Scholars</p>
-                <p class="postText caption">
-                  Ms. Sasha Baker, Acting Under Secretary of Defense for Policy spoke with students from William &amp; Mary’s Global Scholars Program, sharing her insights on national security, global challenges and opportunities, and how we’re working across the whole-of-government and with allies and partners to implement the National Defense Strategy. We thank the scholars for the rich exchange and are fortunate to have had the opportunity to engage with future leaders in foreign policy and national security.<br><br>
-                  United States Department of Defense · Katherine Rowe
+            <!-- POST 7 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D4E22AQEpi7cZGtE9qA/feedshare-shrink_1280/feedshare-shrink_1280/0/1705116378485?e=1773878400&v=beta&t=w3c809A09TkKaLWT9fuR_o4yF6J1dax64AWoenJlAjk" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Sasha Baker spoke with Global Scholars</p>
+                <p class="cardText caption">
+                  Acting Under Secretary of Defense Sasha Baker shared insights on national security and the National Defense Strategy with W&amp;M Global Scholars, engaging future foreign policy leaders.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Shared</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/office-of-the-under-secretary-of-war-for-policy_ms-sasha-baker-acting-under-secretary-of-ugcPost-7151776456820346880-o-_J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op3" href="https://www.linkedin.com/posts/office-of-the-under-secretary-of-war-for-policy_ms-sasha-baker-acting-under-secretary-of-ugcPost-7151776456820346880-o-_J" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
-            <article class="post" data-has-caption="true">
-              <div class="postMedia" aria-hidden="true"></div>
-              <div class="postBody">
-                <p class="postTitle">Shared post (text unavailable)</p>
-                <p class="postText caption">
-                  LinkedIn returned an internal error for this link when I tried to fetch the post text. If you paste the post text here, it’ll display like the others.
+            <!-- POST 8 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQGrFtVtZmDchA/feedshare-shrink_800/feedshare-shrink_800/0/1699555821765?e=1773878400&v=beta&t=LOps2amJRQObbURFyS2JJaTfYqpy6eW-vwvaHc0WOtM" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">A Great Day Back in DC</p>
+                <p class="cardText caption">
+                  A DC day with Global Scholars: visits to Arnold &amp; Porter, the Capitol, Sen. Warner's intelligence staff, and a panel with Rear Admiral Studeman — plus quality time with mentors and W&amp;M alums.
                 </p>
-                <div class="postFooter">
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/natashayotmanee_it-was-a-great-day-to-be-back-in-dc-this-activity-7128453792643104768-4s38" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 9 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQGAewyGv60Ttw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1693958599063?e=1773878400&v=beta&t=uLUAgNQGsR5RTtyDZiB7HwtBy1TuqS92MIeZbHmxcu0" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Wrapping Up TANIP at the Royal Thai Embassy</p>
+                <p class="cardText caption">
+                  Reflecting on a summer with the Thai-American National Internship Program: working on public relations, policy memos, and the Sawasdee DC festival, and deepening ties to Thai heritage.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_tanip-thailand-internship-activity-7104977345261801472-KV7_" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 10 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQHFEaEQccFoug/feedshare-shrink_800/feedshare-shrink_800/0/1693421137906?e=1773878400&v=beta&t=ee9qMrY0lBZh7NN48N-8RkGPO4UO2ZhPLeQrOmWpS3E" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Wrapping Up at the East-West Center</p>
+                <p class="cardText caption">
+                  Ten weeks with the East-West Center's Young Professionals Program: contributing to the ASEAN Matters for America publication, working alongside an incredible team, and making lasting memories with fellow YPPs.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op2" href="https://www.linkedin.com/posts/natashayotmanee_internship-eastwestcenter-indopacific-activity-7102723056388775936-LlzE" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 11 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D4E10AQEuPaT9tnuneA/image-shrink_1280/image-shrink_1280/0/1691176504896?e=1772607600&v=beta&t=fA6YC677PtlfypZsMkWRv4edNExSfWUkWJ5JKUydLIo" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">TANIP &amp; IMPACT! Graduation</p>
+                <p class="cardText caption">
+                  Congratulations to East-West Center Young Professionals Joseph Maga and Natasha Yotmanee on completing TANIP, and to Beatrice Windorski on completing the IMPACT! Filipino-American National Internship Program.
+                </p>
+                <div class="cardFooter">
                   <span class="mini">LinkedIn · Shared</span>
-                  <a class="btn primary" href="https://www.linkedin.com/posts/ugcPost-7152694777858203648-gQGR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_3cMEBJmeZzCb0Cy3e5WIgP7KIHPNgeKw" target="_blank" rel="noopener">Open ↗</a>
+                  <a class="btn op3" href="https://www.linkedin.com/feed/update/urn:li:activity:7093308407557836801" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 12 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQHuym28Io61gQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1689710699069?e=1773878400&v=beta&t=ogLneKBJ7cvr1VL3QBUuoPM8dHxAoUOyf9xOYADIBdk" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Lunch with Ambassador Tanee Sangrat</p>
+                <p class="cardText caption">
+                  As part of TANIP, had the opportunity to have lunch with Thai Ambassador Tanee Sangrat at his residence for meaningful conversations about Thailand–U.S. relations.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/natashayotmanee_tanip-thailand-internship-activity-7087160356317384704-cZwi" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 13 -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://media.licdn.com/dms/image/v2/D5622AQEIY-ADdIxV-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1688010540417?e=1773878400&v=beta&t=3M-0vsqRgwBuUR6akCY3T2GEew2Hdo2a2jTFCqcEG44" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Week One at the East-West Center</p>
+                <p class="cardText caption">
+                  Kicking off the EWC Young Professionals Program: researching ASEAN Matters for America, attending events at CSIS, Carnegie, APIAVote, and the White House arrival ceremony for India PM Modi.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_internship-activity-7080029375097683968-xW76" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
 
           </div>
+          </div>
         </div>
       </div>
+      <footer>
+        <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
+        </div>
+      </footer>
     </section>
 
     <!-- CONTACT -->
     <section class="page" id="page-contact" data-page="contact">
-      <div class="grid cols2">
-        <div class="card pad">
-          <h1>Contact</h1>
-          <p class="muted">
-            If you’d like to collaborate or connect about opportunities in peace &amp; humanitarian work, reach out here:
-          </p>
+      <div class="card pad">
+        <h1>Contact</h1>
+        <p class="muted">If you'd like to collaborate or connect, reach out here:</p>
 
-          <div class="divider"></div>
+        <div class="divider"></div>
 
-          <h2>Ways to reach me</h2>
-          <div class="grid">
-            <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,0.04);">
-              <h3>Email</h3>
-              <p class="muted"><a href="mailto:nyotmanee@gmail.com">nyotmanee@gmail.com</a></p>
-            </div>
-
-            <div class="card pad" style="box-shadow:none;background:rgba(255,255,255,0.04);">
-              <h3>LinkedIn</h3>
-              <p class="muted"><a href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">www.linkedin.com/in/natashayotmanee ↗</a></p>
-            </div>
+        <div class="grid cols2even">
+          <div class="card pad contactBoxGreen" style="box-shadow:none;">
+            <h3>Personal Email</h3>
+            <p class="muted" style="margin:0 0 14px 0;">
+              <a href="mailto:nyotmanee@gmail.com">nyotmanee@gmail.com</a>
+            </p>
+            <h3>School Email</h3>
+            <p class="muted" style="margin:0;">
+              <a href="mailto:nsyotmanee@wm.edu">nsyotmanee@wm.edu</a>
+            </p>
           </div>
 
-          <div class="divider"></div>
-
-          <h2>GitHub Pages setup</h2>
-          <ol class="list">
-            <li>Create a repo named <strong>yourusername.github.io</strong> (or any repo if you prefer a project site).</li>
-            <li>Add this file as <strong>index.html</strong> (root of the repo).</li>
-            <li>In GitHub: <strong>Settings → Pages</strong> → Source: <strong>Deploy from branch</strong> → Branch: <strong>main</strong>, Folder: <strong>/(root)</strong>.</li>
-          </ol>
+          <div class="card pad contactBoxBlue" style="box-shadow:none;">
+            <h3>LinkedIn</h3>
+            <p class="muted" style="margin:0;">
+              <a href="https://www.linkedin.com/in/natashayotmanee" target="_blank" rel="noopener">www.linkedin.com/in/natashayotmanee</a>
+            </p>
+          </div>
         </div>
 
-        <aside class="card pad">
-          <h2>One-paragraph intro (copy/paste)</h2>
-          <p class="muted">
-            Hi! I’m Natasha Yotmanee (she/her), a senior at William &amp; Mary graduating in May 2026. I study International Relations
-            and Data Science, and I’m building a career focused on peacekeeping, conflict prevention, and humanitarian aid—especially
-            in the Asia-Pacific. I’m interested in bridging technology and diplomacy through data-driven analysis and practical
-            policy strategy.
-          </p>
-        </aside>
+        <footer>
+          <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+          <div>
+            <a href="#home" data-route="home">Home</a>
+            <span class="muted2"> · </span>
+            <a href="#cv" data-route="cv">CV</a>
+            <span class="muted2"> · </span>
+            <a href="#research" data-route="research">Research &amp; Publications</a>
+            <span class="muted2"> · </span>
+            <a href="#posts" data-route="posts">Posts</a>
+            <span class="muted2"> · </span>
+            <a href="#contact" data-route="contact">Contact</a>
+          </div>
+        </footer>
       </div>
-
-      <footer>
-        <div>© <span id="year"></span> Natasha Yotmanee</div>
-        <div class="footLinks">
-          <a href="#home" data-route="home">Home</a>
-          <span class="muted2">·</span>
-          <a href="#cv" data-route="cv">CV</a>
-          <span class="muted2">·</span>
-          <a href="#research" data-route="research">Research</a>
-          <span class="muted2">·</span>
-          <a href="#posts" data-route="posts">Posts</a>
-        </div>
-      </footer>
     </section>
   </main>
 
   <script>
-    // Simple hash-router to simulate “subpages” within one file
-    const routes = ["home", "cv", "research", "posts", "contact"];
+    const routes = ["home","cv","research","posts","contact"];
     const pages = [...document.querySelectorAll(".page")];
     const navLinks = [...document.querySelectorAll("[data-route]")];
 
     function setActiveRoute(route){
       const safe = routes.includes(route) ? route : "home";
-
       pages.forEach(p => p.classList.toggle("active", p.dataset.page === safe));
       navLinks.forEach(a => a.classList.toggle("active", a.dataset.route === safe));
-
-      // a11y: move focus to main heading of the page
-      const activePage = document.querySelector(`.page[data-page="${safe}"]`);
-      const heading = activePage ? activePage.querySelector("h1") : null;
-      if (heading) {
-        heading.setAttribute("tabindex", "-1");
-        heading.focus({preventScroll:true});
-        heading.removeAttribute("tabindex");
-      }
     }
 
     function onHashChange(){
@@ -976,19 +1389,82 @@
     window.addEventListener("hashchange", onHashChange);
     onHashChange();
 
-    // Footer year
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    // Fill all footer year spans
+    const yr = new Date().getFullYear();
+    document.querySelectorAll(".footerYear, #year").forEach(el => el.textContent = yr);
 
-    // Posts: toggle captions
     const toggleBtn = document.getElementById("toggleCaptionsBtn");
     let captionsOn = true;
+
+    function updateCaptionBtn(){
+      if (!toggleBtn) return;
+      toggleBtn.textContent = captionsOn ? "Mini Summary (on)" : "Mini Summary (off)";
+    }
+    updateCaptionBtn();
+
     toggleBtn?.addEventListener("click", () => {
       captionsOn = !captionsOn;
       document.querySelectorAll(".caption").forEach(el => {
         el.style.display = captionsOn ? "" : "none";
       });
-      toggleBtn.textContent = captionsOn ? "Toggle captions" : "Show captions";
+      updateCaptionBtn();
+    });
+
+    // Scroll buttons for posts carousel
+    const scroller = document.getElementById("postsScroller");
+    const btnLeft  = document.getElementById("scrollLeft");
+    const btnRight = document.getElementById("scrollRight");
+
+    function updateScrollBtns(){
+      if (!scroller) return;
+      const atStart = scroller.scrollLeft <= 4;
+      const atEnd   = scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4;
+      btnLeft.classList.toggle("hidden", atStart);
+      btnRight.classList.toggle("hidden", atEnd);
+    }
+
+    if (scroller){
+      scroller.addEventListener("scroll", updateScrollBtns, { passive: true });
+      updateScrollBtns();
+
+      btnLeft.addEventListener("click", () => {
+        scroller.scrollBy({ left: -320, behavior: "smooth" });
+      });
+      btnRight.addEventListener("click", () => {
+        scroller.scrollBy({ left: 320, behavior: "smooth" });
+      });
+    }
+
+    function scrollToTargetId(targetId){
+      if (!targetId) return;
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      const headerHeight = document.querySelector('.topbar')?.offsetHeight || 70;
+      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+      window.scrollTo({ top, behavior: "smooth" });
+      el.animate(
+        [
+          { boxShadow: "0 0 0 rgba(0,0,0,0)" },
+          { boxShadow: "0 0 0 6px rgba(99,102,241,0.18)" },
+          { boxShadow: "0 0 0 rgba(0,0,0,0)" }
+        ],
+        { duration: 900, easing: "ease-out" }
+      );
+    }
+
+    document.querySelectorAll('a[data-scrolltarget]').forEach(a => {
+      a.addEventListener("click", (e) => {
+        const route = a.getAttribute("data-route");
+        const targetId = a.getAttribute("data-scrolltarget");
+        if (!route || !targetId) return;
+
+        location.hash = "#" + route;
+        setTimeout(() => {
+          requestAnimationFrame(() => scrollToTargetId(targetId));
+        }, 0);
+
+        e.preventDefault();
+      });
     });
   </script>
 </body>
