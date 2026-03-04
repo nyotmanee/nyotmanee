@@ -92,91 +92,6 @@
       --contactBlueTx: #1e3a8a;
     }
 
-    html.dark-mode {
-      --bg: #0f172a;
-      --bg2: #1a2640;
-
-      --panel: #1a2640;
-
-      --text: #f1f5f9;
-      --muted: #cbd5e1;
-      --muted2: #94a3b8;
-      --border: #334155;
-
-      --shadow: 0 10px 22px rgba(0, 0, 0, 0.30);
-      --shadow2: 0 14px 30px rgba(0, 0, 0, 0.40);
-
-      --link: #22d3ee;
-      --focus: rgba(34,211,238,0.18);
-
-      --btnBg: rgba(34,211,238,0.12);
-      --btnBd: rgba(34,211,238,0.28);
-      --btnTx: #06b6d4;
-
-      --fxBg: rgba(168,85,247,0.12);
-      --fxBd: rgba(168,85,247,0.34);
-      --fxTx: #d8b4fe;
-
-      --skillBg: rgba(59,130,246,0.12);
-      --skillBd: rgba(59,130,246,0.26);
-      --skillTx: #93c5fd;
-
-      --lovePurpleBg: rgba(168,85,247,0.08);
-      --lovePurpleBd: rgba(168,85,247,0.22);
-
-      --loveGreenBg: rgba(34,211,238,0.08);
-      --loveGreenBd: rgba(34,211,238,0.22);
-
-      --loveBlueBg: rgba(59,130,246,0.06);
-      --loveBlueBd: rgba(59,130,246,0.18);
-
-      --opBtn1Bg: rgba(168,85,247,0.12);
-      --opBtn1Bd: rgba(168,85,247,0.30);
-      --opBtn1Tx: #d8b4fe;
-      --opBtn2Bg: rgba(59,130,246,0.10);
-      --opBtn2Bd: rgba(59,130,246,0.28);
-      --opBtn2Tx: #93c5fd;
-      --opBtn3Bg: rgba(34,211,238,0.10);
-      --opBtn3Bd: rgba(34,211,238,0.28);
-      --opBtn3Tx: #22d3ee;
-      --opBtn4Bg: rgba(34,211,238,0.06);
-      --opBtn4Bd: rgba(34,211,238,0.20);
-      --opBtn4Tx: #67e8f9;
-
-      --researchCardBg: rgba(168,85,247,0.06);
-      --researchCardBd: rgba(168,85,247,0.18);
-
-      --pubCardBg: rgba(34,211,238,0.06);
-      --pubCardBd: rgba(34,211,238,0.18);
-
-      --activeTabBg: rgba(168,85,247,0.14);
-      --activeTabBd: rgba(168,85,247,0.30);
-      --activeTabTx: #d8b4fe;
-
-      --rcBtnBg: rgba(168,85,247,0.12);
-      --rcBtnBd: rgba(168,85,247,0.34);
-      --rcBtnTx: #d8b4fe;
-
-      --contactGreenBg: rgba(34,211,238,0.10);
-      --contactGreenBd: rgba(34,211,238,0.26);
-      --contactGreenTx: #22d3ee;
-
-      --contactBlueBg: rgba(59,130,246,0.10);
-      --contactBlueBd: rgba(59,130,246,0.24);
-      --contactBlueTx: #93c5fd;
-    }
-
-    html.dark-mode {
-      background:
-        radial-gradient(ellipse 200% 100% at 0% 0%,   rgba(34,211,238,0.05),  transparent 65%),
-        radial-gradient(ellipse 180% 90%  at 100% 0%,  rgba(59,130,246,0.04),   transparent 65%),
-        radial-gradient(ellipse 200% 80%  at 50% 50%,  rgba(168,85,247,0.03),  transparent 65%),
-        radial-gradient(ellipse 200% 80%  at 0% 100%,  rgba(34,211,238,0.04),  transparent 65%),
-        radial-gradient(ellipse 180% 80%  at 100% 100%,rgba(59,130,246,0.03),   transparent 65%),
-        #0f172a;
-      min-height: 100%;
-    }
-
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     html {
@@ -697,33 +612,6 @@
       border-left-color: var(--purple);
       font-weight: 600;
     }
-
-    /* Dark Mode Toggle Button */
-    .darkModeToggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      padding: 0;
-      border-radius: 50%;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-      cursor: pointer;
-      font-size: 18px;
-      transition: background .12s ease, border-color .12s ease;
-      margin-left: 8px;
-    }
-
-    .darkModeToggle:hover {
-      background: rgba(15, 23, 42, 0.04);
-      border-color: var(--border);
-    }
-
-    html.dark-mode .darkModeToggle:hover {
-      background: rgba(241, 245, 249, 0.04);
-    }
   </style>
 </head>
 
@@ -746,7 +634,6 @@
         <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
         <a class="pill" href="#posts" data-route="posts">Posts</a>
         <a class="pill" href="#contact" data-route="contact">Contact</a>
-        <button class="darkModeToggle" id="darkModeToggleTop" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
       </nav>
     </div>
   </header>
@@ -1131,19 +1018,16 @@
       </div>
       <footer>
         <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <div>
-            <a href="#home" data-route="home">Home</a>
-            <span class="muted2"> · </span>
-            <a href="#cv" data-route="cv">CV</a>
-            <span class="muted2"> · </span>
-            <a href="#research" data-route="research">Research &amp; Publications</a>
-            <span class="muted2"> · </span>
-            <a href="#posts" data-route="posts">Posts</a>
-            <span class="muted2"> · </span>
-            <a href="#contact" data-route="contact">Contact</a>
-          </div>
-          <button class="darkModeToggle" id="darkModeToggleCv" aria-label="Toggle dark mode" title="Toggle dark mode">☀️</button>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
         </div>
       </footer>
     </section>
@@ -1496,7 +1380,7 @@
           </div>
         </div>
       </div>
-      <div class="card pad">
+      <footer>
         <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
         <div>
           <a href="#home" data-route="home">Home</a>
@@ -1655,41 +1539,11 @@
       });
     });
 
-    // Dark Mode Toggle
-    const darkModeToggleButtons = document.querySelectorAll('.darkModeToggle');
-    const html = document.documentElement;
-
-    function initDarkMode() {
-      const savedMode = localStorage.getItem('darkMode');
-      if (savedMode === 'true') {
-        html.classList.add('dark-mode');
-        updateDarkModeButtons();
-      }
-    }
-
-    function updateDarkModeButtons() {
-      const isDark = html.classList.contains('dark-mode');
-      darkModeToggleButtons.forEach(btn => {
-        btn.textContent = isDark ? '🌙' : '☀️';
-      });
-    }
-
-    darkModeToggleButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        html.classList.toggle('dark-mode');
-        const isDark = html.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDark);
-        updateDarkModeButtons();
-      });
-    });
-
-    initDarkMode();
-
-    // CV Sidebar Link Active State
+    // CV Sidebar Link Active State and Autoscroll
     const cvSidebarLinks = document.querySelectorAll('.cvSidebarLink');
     
     function updateActiveSidebarLink() {
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
       const sections = ['cv-education', 'cv-experience', 'cv-contrib-awards', 'cv-skills'];
       let activeSection = sections[0];
 
@@ -1710,12 +1564,13 @@
 
     cvSidebarLinks.forEach(link => {
       link.addEventListener('click', (e) => {
+        e.preventDefault();
         const sectionId = link.getAttribute('data-section');
         const element = document.getElementById(sectionId);
         if (element) {
-          e.preventDefault();
-          location.hash = '#' + sectionId;
-          element.scrollIntoView({ behavior: 'smooth' });
+          const headerHeight = document.querySelector('.topbar')?.offsetHeight || 80;
+          const top = element.offsetTop - headerHeight - 20;
+          window.scrollTo({ top, behavior: 'smooth' });
           setTimeout(() => updateActiveSidebarLink(), 100);
         }
       });
