@@ -779,7 +779,10 @@
       <div class="cvContainer">
         <aside class="cvSidebar">
           <h3>Sections</h3>
-          <a class="cvSidebarLink active" href="#cv-contrib-awards" data-section="cv-contrib-awards">Research, Awards, &amp; Skills</a>
+          <a class="cvSidebarLink active" href="#cv-education" data-section="cv-education">Education</a>
+          <a class="cvSidebarLink" href="#cv-experience" data-section="cv-experience">Experience</a>
+          <a class="cvSidebarLink" href="#cv-contrib-awards" data-section="cv-contrib-awards">Programs &amp; Awards</a>
+          <a class="cvSidebarLink" href="#cv-research-contrib" data-section="cv-research-contrib">Research Contributions &amp; Skills</a>
         </aside>
 
         <div>
@@ -1549,7 +1552,7 @@
     
     function updateActiveSidebarLink() {
       const scrollPosition = window.scrollY + 120;
-      const sections = ['cv-contrib-awards'];
+      const sections = ['cv-education', 'cv-experience', 'cv-contrib-awards', 'cv-research-contrib'];
       let activeSection = sections[0];
 
       for (let section of sections) {
