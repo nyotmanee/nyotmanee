@@ -777,10 +777,7 @@
       <div class="cvContainer">
         <aside class="cvSidebar">
           <h3>Sections</h3>
-          <a class="cvSidebarLink active" href="#cv-education" data-section="cv-education">Education</a>
-          <a class="cvSidebarLink" href="#cv-experience" data-section="cv-experience">Experience</a>
-          <a class="cvSidebarLink" href="#cv-contrib-awards" data-section="cv-contrib-awards">Research &amp; Awards</a>
-          <a class="cvSidebarLink" href="#cv-skills" data-section="cv-skills">Skills</a>
+          <a class="cvSidebarLink active" href="#cv-contrib-awards" data-section="cv-contrib-awards">Research, Awards, &amp; Skills</a>
         </aside>
 
         <div>
@@ -1009,9 +1006,11 @@
             <h2>Skills (Languages)</h2>
             <p class="muted" style="margin-bottom:8px;">Software and languages I use for research, analysis, and communication.</p>
 
-            <p style="font-size:14px; color: var(--skillTx); margin:0;">
-              <strong>Python (intermediate)</strong> | <strong>SQL (basic, developing)</strong> | <strong>R (basic)</strong> | <strong>English (native)</strong> | <strong>Thai (oral proficiency)</strong> | <strong>Mandarin Chinese (intermediate)</strong>
-            </p>
+            <div class="tItem" style="box-shadow:none;">
+              <p style="font-size:14px; color: var(--skillTx); margin:0;">
+                <strong>Python (intermediate)</strong> | <strong>SQL (basic, developing)</strong> | <strong>R (basic)</strong> | <strong>English (native)</strong> | <strong>Thai (oral proficiency)</strong> | <strong>Mandarin Chinese (intermediate)</strong>
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -1543,7 +1542,7 @@
     
     function updateActiveSidebarLink() {
       const scrollPosition = window.scrollY + 120;
-      const sections = ['cv-education', 'cv-experience', 'cv-contrib-awards', 'cv-skills'];
+      const sections = ['cv-contrib-awards'];
       let activeSection = sections[0];
 
       for (let section of sections) {
