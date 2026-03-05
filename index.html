@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Natasha Yotmanee - International Relations | Data Science | Asia-Pacific" />
+  <meta name="description" content="Natasha Yotmanee - International Relations | Data Science | Indo-Pacific" />
   <title>Natasha Yotmanee</title>
 
   <style>
@@ -133,6 +133,110 @@
       border-bottom: 1px solid var(--border);
     }
 
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+      margin: 0;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .navWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      transition: max-height 0.3s ease;
+    }
+
+    @media (max-width: 999px) {
+      .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 12px;
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        gap: 4px;
+      }
+
+      .nav.visible {
+        max-height: 500px;
+      }
+
+      .nav .pill {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .nav {
+        position: static;
+        background: transparent;
+        backdrop-filter: none;
+        flex-direction: row;
+        padding: 0;
+        border-bottom: none;
+        max-height: 100%;
+        overflow: visible;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        gap: 8px;
+      }
+
+      .nav .pill {
+        width: auto;
+      }
+
+      .nav:not(.visible) {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .nav.visible {
+        max-height: 100%;
+      }
+    }
+
     /* Offset anchor scroll targets so the sticky header never covers them */
     [id]{
       scroll-margin-top: 80px;
@@ -151,6 +255,7 @@
       gap: 12px;
       align-items: center;
       min-width: 240px;
+      flex: 1;
     }
     .avatar{
       width: 38px; height: 38px;
@@ -168,11 +273,18 @@
       display:block;
     }
     .brandText{
-      display: grid;
-      line-height: 1.15;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .brandText strong{ font-size: 14px; letter-spacing: 0.2px; }
+    .brandText strong{ font-size: 16px; letter-spacing: 0.2px; }
     .brandText span{ font-size: 12px; color: var(--muted2); }
+
+    .navWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
     .nav{
       display: flex;
@@ -181,6 +293,38 @@
       flex-wrap: wrap;
       justify-content: flex-end;
     }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+      margin: 0;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+
     .pill{
       display: inline-flex;
       align-items: center;
@@ -410,7 +554,7 @@
       display:block;
     }
 
-    .stack{ display: grid; gap: 14px; }
+    .stack{ display: grid; gap: 0px; }
 
     .cardPost{
       border-radius: 18px;
@@ -612,6 +756,147 @@
       border-left-color: var(--purple);
       font-weight: 600;
     }
+
+    .cvSidebarLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      flex: 1;
+    }
+
+    .sidebarScrollBtn.top::after {
+      content: '↑';
+    }
+
+    .sidebarScrollBtn.bottom::after {
+      content: '↓';
+    }
+
+    .thingsContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      position: relative;
+    }
+
+    @media (min-width: 1200px) {
+      .thingsContainer {
+        grid-template-columns: 240px 1fr;
+      }
+    }
+
+    .thingsSidebar {
+      display: none;
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+      padding: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    @media (min-width: 1200px) {
+      .thingsSidebar {
+        display: block;
+      }
+    }
+
+    .thingsSidebar h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted2);
+      margin: 0 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .thingsSidebarContent {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .thingsSidebarTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .thingsSidebarLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      flex: 1;
+    }
+
+    .thingsSidebarLink {
+      display: block;
+      padding: 10px 12px;
+      margin: 4px 0;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      transition: background .12s ease, color .12s ease;
+      text-decoration: none;
+      border-left: 3px solid transparent;
+    }
+
+    .thingsSidebarLink:hover {
+      background: rgba(99, 102, 241, 0.08);
+      color: var(--text);
+      border-left-color: var(--purple);
+      text-decoration: none;
+    }
+
+    .thingsSidebarLink.active {
+      background: rgba(99, 102, 241, 0.12);
+      color: var(--purple);
+      border-left-color: var(--purple);
+      font-weight: 600;
+    }
+
+    .sidebarScrollButtons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sidebarScrollBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      min-width: 100px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      color: var(--purple);
+      cursor: pointer;
+      transition: all 0.12s ease;
+      font-size: 13px;
+      padding: 0 12px;
+      font-weight: 600;
+      gap: 6px;
+    }
+
+    .sidebarScrollBtn:hover {
+      background: rgba(99, 102, 241, 0.18);
+      border-color: rgba(99, 102, 241, 0.40);
+      transform: translateY(-1px);
+    }
+
+    .sidebarScrollBtn.top::before {
+      content: '↑';
+    }
+
+    .sidebarScrollBtn.bottom::before {
+      content: '↓';
+    }
   </style>
 </head>
 
@@ -619,22 +904,31 @@
   <header class="topbar">
     <div class="topbarInner">
       <div class="brand" role="banner">
-        <div class="avatar" aria-hidden="true">
-          <img alt="Natasha Yotmanee" src="https://media.licdn.com/dms/image/v2/D4E03AQHGI9a5MyIa3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730209655021?e=2147483647&t=HgT-tlrRoORyL3Ceta22UAp6S2l_dSJabJzMwwcDqoM&v=beta" />
-        </div>
-        <div class="brandText">
-          <strong>Natasha Yotmanee</strong>
-          <span>International Relations · Data Science · Asia-Pacific</span>
-        </div>
+        <a href="#home" data-route="home" style="display: flex; gap: 12px; align-items: center; text-decoration: none; color: inherit;">
+          <div class="avatar" aria-hidden="true">
+            <img alt="Natasha Yotmanee" src="https://media.licdn.com/dms/image/v2/D4E03AQHGI9a5MyIa3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730209655021?e=2147483647&t=HgT-tlrRoORyL3Ceta22UAp6S2l_dSJabJzMwwcDqoM&v=beta" />
+          </div>
+          <div class="brandText">
+            <strong>Natasha Yotmanee</strong>
+          </div>
+        </a>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="pill active" href="#home" data-route="home">Home</a>
-        <a class="pill" href="#cv" data-route="cv">CV</a>
-        <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
-        <a class="pill" href="#posts" data-route="posts">Posts</a>
-        <a class="pill" href="#contact" data-route="contact">Contact</a>
-      </nav>
+      <div class="navWrapper">
+        <nav class="nav visible" aria-label="Primary" id="nav">
+          <a class="pill active" href="#home" data-route="home">Home</a>
+          <a class="pill" href="#cv" data-route="cv">CV</a>
+          <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
+          <a class="pill" href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a class="pill" href="#posts" data-route="posts">Posts</a>
+          <a class="pill" href="#contact" data-route="contact">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -649,7 +943,7 @@
                 <img alt="Natasha Yotmanee" src="https://media.licdn.com/dms/image/v2/D4E03AQHGI9a5MyIa3A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730209655021?e=2147483647&t=HgT-tlrRoORyL3Ceta22UAp6S2l_dSJabJzMwwcDqoM&v=beta" />
               </div>
               <div>
-                <div class="kicker">International Relations · Data Science · Asia-Pacific</div>
+                <div class="kicker">International Relations · Data Science · Indo-Pacific</div>
                 <h1>Hi! I'm Natasha Yotmanee <span>(she/her)</span>.</h1>
               </div>
             </div>
@@ -661,7 +955,7 @@
             <p>
               I am driven to build a career dedicated to <strong>peacekeeping</strong>, <strong>conflict prevention</strong>, and
               <strong>humanitarian aid</strong>, focusing on promoting resilience and sustainable peace in fragile regions. Committed to advancing
-              peace, security, and development across the <strong>Asia-Pacific</strong>, I aim to bridge technology and diplomacy, using data-driven
+              peace, security, and development across the <strong>Indo-Pacific</strong>, I aim to bridge technology and diplomacy, using data-driven
               insights and strategic thinking to make meaningful contributions within the region and beyond.
             </p>
           </div>
@@ -681,83 +975,40 @@
               <li><strong>Software:</strong> Python (intermediate), SQL (basic, developing), R (basic)</li>
             </ul>
           </div>
+        </div>
+
+        <div class="stack">
+          <aside class="card pad" style="height: fit-content;">
+            <h2>Some Things I Love:</h2>
+
+            <p class="muted">Beyond academics and policy work, these are a few things that make me, well… me. Click on a category to explore the page and see more!</p>
+
+            <div class="divider"></div>
+
+            <div class="btnRow" style="flex-direction: column; gap: 8px;">
+              <a class="btn" style="background: rgba(14,165,166,0.10); border-color: rgba(14,165,166,0.28); color: #064e4e; width: 100%;" href="#things" data-route="things" data-scrolltarget="things-bucketlist">Senior Year - Bucket List 🎓 ↗</a>
+              <a class="btn" style="background: rgba(37,99,235,0.10); border-color: rgba(37,99,235,0.28); color: #003d82; width: 100%;" href="#things" data-route="things" data-scrolltarget="things-food">Food 🍲 ↗</a>
+              <a class="btn" style="background: rgba(14,165,166,0.10); border-color: rgba(14,165,166,0.28); color: #064e4e; width: 100%;" href="#things" data-route="things" data-scrolltarget="things-travel">Travel 🌎 ↗</a>
+              <a class="btn" style="background: rgba(37,99,235,0.10); border-color: rgba(37,99,235,0.28); color: #003d82; width: 100%;" href="#things" data-route="things" data-scrolltarget="things-books">Books 📚 ↗</a>
+              <a class="btn" style="background: rgba(14,165,166,0.10); border-color: rgba(14,165,166,0.28); color: #064e4e; width: 100%;" href="#things" data-route="things" data-scrolltarget="things-movies">Movies 🎬 ↗</a>
+            </div>
+          </aside>
 
           <div class="card pad">
             <h2>Featured Experience</h2>
             <p class="muted">
               A few organizations I've worked with and learned from. Click to jump to the related section on my CV.
             </p>
-            <div class="btnRow">
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-experience">W&amp;M - Department of Government ↗</a>
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-asiapolicylab">W&amp;M - Asia Policy Lab ↗</a>
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-undp">UNDP - Crisis Bureau ↗</a>
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-usawc">USAWC - Strategic Studies Institute ↗</a>
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-ewc">East-West Center in Washington ↗</a>
-              <a class="btn fx" href="#cv" data-route="cv" data-scrolltarget="cv-rte">Royal Thai Embassy &amp; US-Asia Institute ↗</a>
+            <div class="btnRow" style="flex-direction: column; gap: 8px;">
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-experience">W&amp;M - Department of Government ↗</a>
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-asiapolicylab">W&amp;M - Asia Policy Lab ↗</a>
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-undp">UNDP - Crisis Bureau ↗</a>
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-usawc">USAWC - Strategic Studies Institute ↗</a>
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-ewc">East-West Center in Washington ↗</a>
+              <a class="btn fx" style="width: 100%;" href="#cv" data-route="cv" data-scrolltarget="cv-rte">Royal Thai Embassy &amp; US-Asia Institute ↗</a>
             </div>
           </div>
         </div>
-
-        <aside class="card pad">
-          <h2>Some Things I Love:</h2>
-
-          <div class="divider"></div>
-
-          <div class="stack">
-            <div class="card pad lovePurple" style="box-shadow:none;">
-              <h3>Food 🍲</h3>
-              <p class="muted" style="margin-bottom:8px;">I'm a foodie who loves trying new places.</p>
-              <p class="muted" style="margin-bottom:6px;"><strong>Current goals before graduation:</strong></p>
-              <ul class="list">
-                <li>Try all the Thai restaurants in Williamsburg!</li>
-                <li>Try as many breakfast spots in the "Pancake Capital of the World" as I can!</li>
-              </ul>
-            </div>
-
-            <div class="card pad loveBlue" style="box-shadow:none;">
-              <h3>Travel 🌎</h3>
-              <p class="muted" style="margin-bottom:8px;">
-                I love traveling to see new places, experience culture, and learn from how people live.
-              </p>
-              <ul class="list">
-                <li>Recently traveled to 15 different cities in China!</li>
-                <li>Have been to countries across Europe, Africa, Asia, and North America!</li>
-              </ul>
-            </div>
-
-            <div class="card pad loveGreen" style="box-shadow:none;">
-              <h3>Books 📚</h3>
-              <p class="muted" style="margin-bottom:8px;">Who doesn't like to read??</p>
-              <ul class="list" style="margin-bottom:12px;">
-                <li><strong>I'm currently reading:</strong> <em>A Thousand Splendid Suns</em> by Khaled Hosseini</li>
-              </ul>
-
-              <div class="divider" style="margin:12px 0;"></div>
-
-              <h3>Movies 🎬</h3>
-              <p class="muted" style="margin-bottom:10px;">
-                We (me &amp; my roomie) are tired of watching trailers for two hours and then watching mediocre movies before going to bed on our Movie Nights. Pitch us your favorite films, hidden gems, or the "so-bad-it's-good" masterpieces!
-              </p>
-              <p class="muted" style="margin-bottom:10px;">
-                The link below is our Movie Night Suggestion Box! Thanks for the recs, and just know that if we pick yours, that means you have superior movie taste. 🍿✨
-              </p>
-              <div class="btnRow">
-                <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfqTbmzsW8QrHWum-mOJPvJSRIqS1NR0V_7xLdNfvRu9swF_w/viewform?usp=header" target="_blank" rel="noopener">Suggestion Box ↗</a>
-              </div>
-            </div>
-
-            <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.04);border-color:rgba(14,165,166,0.18);">
-              <h3>Senior Year - Bucket List 🎓</h3>
-              <p class="muted" style="margin-bottom:8px;">Time is ticking. Here are some things I'm looking forward to:</p>
-              <ul class="list">
-                <li>W&amp;M zip line (I didn't even know we had one)</li>
-                <li>Natasha Bedingfield &amp; B.o.B concert!</li>
-                <li>Visit Muscarelle Museum and W&amp;M Archives/Special Collections</li>
-                <li>Explore W&amp;M underground tunnels and crypt??</li>
-              </ul>
-            </div>
-          </div>
-        </aside>
       </div>
       <footer>
         <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
@@ -768,7 +1019,9 @@
           <span class="muted2"> · </span>
           <a href="#research" data-route="research">Research &amp; Publications</a>
           <span class="muted2"> · </span>
-          <a href="#posts" data-route="posts">Posts</a>
+          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts &amp; Pics</a>
           <span class="muted2"> · </span>
           <a href="#contact" data-route="contact">Contact</a>
         </div>
@@ -779,10 +1032,12 @@
       <div class="cvContainer">
         <aside class="cvSidebar">
           <h3>Sections</h3>
-          <a class="cvSidebarLink active" href="#cv-education" data-section="cv-education">Education</a>
-          <a class="cvSidebarLink" href="#cv-experience" data-section="cv-experience">Experience</a>
-          <a class="cvSidebarLink" href="#cv-contrib-awards" data-section="cv-contrib-awards">Programs &amp; Awards</a>
-          <a class="cvSidebarLink" href="#cv-research-contrib" data-section="cv-research-contrib">Research Contributions &amp; Skills</a>
+          <div class="cvSidebarLinks">
+            <a class="cvSidebarLink active" href="#cv-education" data-section="cv-education">Education</a>
+            <a class="cvSidebarLink" href="#cv-experience" data-section="cv-experience">Experience</a>
+            <a class="cvSidebarLink" href="#cv-contrib-awards" data-section="cv-contrib-awards">Programs &amp; Awards</a>
+            <a class="cvSidebarLink" href="#cv-research-contrib" data-section="cv-research-contrib">Research Contributions &amp; Skills</a>
+          </div>
         </aside>
 
         <div>
@@ -842,7 +1097,7 @@
             <div class="divider"></div>
 
             <section id="cv-experience">
-              <div class="card pad" style="box-shadow:none;background:rgba(37,99,235,0.06);border-color:rgba(37,99,235,0.20);">
+              <div class="card pad" style="box-shadow:none;background:rgba(59,130,246,0.06);border-color:rgba(59,130,246,0.20);">
                 <h2>Professional &amp; Research Experience</h2>
                 <div class="timeline">
 
@@ -945,7 +1200,7 @@
             <div class="divider"></div>
 
             <section id="cv-contrib-awards">
-              <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+              <div class="card pad" style="box-shadow:none;background:rgba(99,102,241,0.06);border-color:rgba(99,102,241,0.20);">
                 <h2>Programs &amp; Awards</h2>
 
                 <div class="tItem" style="box-shadow:none;">
@@ -957,9 +1212,11 @@
                     <strong>Global Scholars Program:</strong> Global Research Institute, W&amp;M (Aug 2023–2024) - selected as 1 of 18.
                   </p>
                   <div class="btnRow">
-                    <a class="btn" href="https://www.wm.edu/offices/dccenter/opportunities/gsp/gsp-alumni/23-24scholars/" target="_blank" rel="noopener">GSP Page ↗</a>
+                    <a class="btn" style="background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.28); color: var(--purple);" href="https://www.wm.edu/offices/dccenter/opportunities/gsp/gsp-alumni/23-24scholars/" target="_blank" rel="noopener">GSP Page ↗</a>
                   </div>
                 </div>
+
+                <div style="height: 12px;"></div>
 
                 <div class="tItem" style="box-shadow:none;">
                   <p class="cardTitle" style="margin:0 0 6px;"><strong>Gates Scholarship</strong></p>
@@ -970,7 +1227,7 @@
                     <strong>Gates Scholarship:</strong> Reves Center for International Studies, W&amp;M (Feb–Jun 2025) - $7,500 study abroad award.
                   </p>
                   <div class="btnRow">
-                    <a class="btn" href="https://studyabroad.wm.edu/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=2659" target="_blank" rel="noopener">Program Page ↗</a>
+                    <a class="btn" style="background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.28); color: var(--purple);" href="https://studyabroad.wm.edu/index.cfm?FuseAction=Programs.ViewProgram&Program_ID=2659" target="_blank" rel="noopener">Program Page ↗</a>
                   </div>
                 </div>
               </div>
@@ -979,7 +1236,7 @@
             <div class="divider"></div>
 
             <section id="cv-research-contrib">
-              <div class="card pad" style="box-shadow:none;background:rgba(99,102,241,0.06);border-color:rgba(99,102,241,0.18);">
+              <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
                 <h2>Research Contributions</h2>
 
                 <div class="tItem" style="box-shadow:none;">
@@ -994,6 +1251,8 @@
                     <a class="btn" href="https://asiamattersforamerica.org/uploads/publications/2023-ASEAN-Matters-for-America.pdf" target="_blank" rel="noopener">ASEAN PDF ↗</a>
                   </div>
                 </div>
+
+                <div style="height: 12px;"></div>
 
                 <div class="tItem" style="box-shadow:none;">
                   <p class="cardTitle" style="margin:0 0 6px;"><strong>Crisis in the Caucasus: Invasion of Georgia (2008–2014)</strong></p>
@@ -1014,10 +1273,23 @@
                 <h2>Skills (Languages)</h2>
                 <p class="muted" style="margin-bottom:8px;">Software and languages I use for research, analysis, and communication.</p>
 
-                <div class="tItem" style="box-shadow:none;">
-                  <p style="font-size:14px; color: var(--skillTx); margin:0;">
-                    <strong>Python (intermediate)</strong> | <strong>SQL (basic, developing)</strong> | <strong>R (basic)</strong> | <strong>English (native)</strong> | <strong>Thai (oral proficiency)</strong> | <strong>Mandarin Chinese (intermediate)</strong>
-                  </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                  <div class="tItem" style="box-shadow:none;">
+                    <h3 style="font-size: 15px; margin: 0 0 10px 0; color: var(--text); font-weight: 600;">Software</h3>
+                    <ul class="list" style="margin: 0;">
+                      <li>Python (intermediate)</li>
+                      <li>SQL (basic, developing)</li>
+                      <li>R (basic)</li>
+                    </ul>
+                  </div>
+                  <div class="tItem" style="box-shadow:none;">
+                    <h3 style="font-size: 15px; margin: 0 0 10px 0; color: var(--text); font-weight: 600;">Languages</h3>
+                    <ul class="list" style="margin: 0;">
+                      <li>English (native)</li>
+                      <li>Thai (oral proficiency)</li>
+                      <li>Mandarin Chinese (intermediate)</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </section>
@@ -1033,7 +1305,9 @@
           <span class="muted2"> · </span>
           <a href="#research" data-route="research">Research &amp; Publications</a>
           <span class="muted2"> · </span>
-          <a href="#posts" data-route="posts">Posts</a>
+          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts &amp; Pics</a>
           <span class="muted2"> · </span>
           <a href="#contact" data-route="contact">Contact</a>
         </div>
@@ -1134,6 +1408,250 @@
           <a href="#cv" data-route="cv">CV</a>
           <span class="muted2"> · </span>
           <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <span class="muted2"> · </span>
+          <a href="#posts" data-route="posts">Posts &amp; Pics</a>
+          <span class="muted2"> · </span>
+          <a href="#contact" data-route="contact">Contact</a>
+        </div>
+      </footer>
+    </section>
+
+    <!-- THINGS I LOVE & BEYOND -->
+    <section class="page" id="page-things" data-page="things">
+      <div class="thingsContainer">
+        <aside class="thingsSidebar">
+          <h3>Sections</h3>
+          <div class="thingsSidebarContent">
+            <div class="thingsSidebarLinks">
+              <a class="thingsSidebarLink active" href="#things-bucketlist" data-section="things-bucketlist">Senior Year 🎓</a>
+              <a class="thingsSidebarLink" href="#things-food" data-section="things-food">Food 🍲</a>
+              <a class="thingsSidebarLink" href="#things-travel" data-section="things-travel">Travel 🌎</a>
+              <a class="thingsSidebarLink" href="#things-books" data-section="things-books">Books 📚</a>
+              <a class="thingsSidebarLink" href="#things-movies" data-section="things-movies">Movies 🎬</a>
+            </div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="card pad">
+            <h1>Things I Love &amp; Beyond</h1>
+            <p class="muted">A collection of the things that bring me joy.</p>
+
+            <div class="divider"></div>
+
+            <section id="things-bucketlist">
+              <div class="card pad" style="box-shadow:none;background:rgba(99,102,241,0.06);border-color:rgba(99,102,241,0.20);">
+                <h2>Senior Year - Bucket List 🎓</h2>
+                <p class="muted" style="margin-bottom:8px;">Time is ticking! Here are some things I'm looking forward to:</p>
+                <div class="tItem" style="box-shadow:none;">
+                  <ul class="list">
+                    <li><a href="https://www.wm.edu/about/visiting/campus-landmarks/lake-matoaka/" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M zip line</a> (I didn't even know we had one)</li>
+                    <li><a href="https://www.instagram.com/p/DUdtxe2gM6B/?igsh=Mnh3Nmxic2Q0NmFo" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Natasha Bedingfield &amp; B.o.B concert!</a></li>
+                    <li>Visit <a href="https://muscarelle.wm.edu/" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Muscarelle Museum</a> and <a href="https://libraries.wm.edu/libraries-spaces/special-collections" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M Archives/Special Collections</a></li>
+                    <li>Explore <a href="https://scrc-kb.libraries.wm.edu/underground-steam-tunnels" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M underground tunnels</a> and <a href="https://research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR0197.xml&highlight=" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">crypt</a>??</li>
+                    <li>Beach day with friends!</li>
+                    <li>Stargazing &amp; Picnic</li>
+                    <li>Richmond Day Trip</li>
+                    <li>Busch Gardens &amp; Water Country USA</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section id="things-food">
+              <div class="card pad" style="box-shadow:none;background:rgba(59,130,246,0.06);border-color:rgba(59,130,246,0.20);">
+                <h2>Food 🍲</h2>
+                <p class="muted" style="margin-bottom:8px;">I'm a foodie who loves trying new places.</p>
+                
+                <div class="tItem" style="box-shadow:none;">
+                  <h3 style="margin-bottom: 8px;">Current Goals Before Graduation:</h3>
+                  <ul class="list">
+                    <li>Try all the Thai restaurants in Williamsburg!</li>
+                    <li>Try as many breakfast spots in the "Pancake Capital of the World" as I can!</li>
+                    <li>Try all the CW restaurants &amp; cafes (almost done!)</li>
+                  </ul>
+                </div>
+
+                <div style="height: 12px;"></div>
+
+                <div class="tItem" style="box-shadow:none;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text);"><em>My Top Recs (so far): </em></strong><strong style="color: var(--text);">Cheapppp &amp; Good ✨</strong></p>
+                  <ul class="list">
+                    <li><a href="https://share.google/y9iitel9dgOEq9HZu" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Chopsticks (Vietnamese)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">I love everything from the pho to the bánh mì. Most dishes are around $15 or less!</div>
+                    </li>
+                    <li><a href="https://share.google/sQiAiv5FrbOgLtaXA" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">La Terraza (Mexican)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">My go-to DoorDash order. $0 delivery and huge portions w/ chips &amp; salsa.<br>Favorite dish: La Parrilla del Mar.</div>
+                    </li>
+                    <li><a href="https://share.google/ANL1FHxNNGbEHrJjp" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">El Sabroson (Salvadoran)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Three pupusas for $10 — hard to beat that price.</div>
+                    </li>
+                    <li><a href="https://share.google/enZTde73fCVYz8FF2" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Oishii (Japanese)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Large portions for the price and always tastes great.</div>
+                    </li>
+                    <li><a href="https://share.google/hLOR5Y3NhJMR3eNLG" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Bangkok Garden (Thai)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">The lunch special is cheap and always delicious.</div>
+                    </li>
+                    <li><a href="https://share.google/EIhlHjSg3vvt4MABU" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Tipsy Bean (Brunch)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Great breakfast menu and really good coffee.</div>
+                    </li>
+                    <li><a href="https://share.google/bYYHd6IdvbvPx8CKM" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Aromas (Cafe)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Very underrated food. My go-to takeout during finals.</div>
+                    </li>
+                    <li><a href="https://share.google/Jhe4qmOnTdKF81dVV" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Bonanza (Korean)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Their Korean fried chicken is incredibly crispy.</div>
+                    </li>
+                    <li><a href="https://share.google/zPpofADW8yVNAEmmz" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Jewish Mother's Deli (Sandwiches)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">The roast beef sandwich cheese pull was insane.</div>
+                    </li>
+                    <li><a href="https://share.google/VHsWeJldlI4EovjfR" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">The Cheese Shop (Sandwiches)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Specifically the Prosciutto with Provolone &amp; Roasted Tomatoes on Focaccia.</div>
+                    </li>
+                    <li><a href="https://share.google/HRD9Sp0lCAU57Xzoc" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">California Tortilla (Mexican)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Usually have big portions (depending on the worker) and a solid alternative to Chipotle.</div>
+                    </li>
+                    <li><a href="https://share.google/6MCHmUXii9QAsEf1n" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Teriyaki Madness (Asian Fusion)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Fast and affordable takeout.</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style="height: 12px;"></div>
+
+                <div class="tItem" style="box-shadow:none;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text);"><em>My Top Recs (so far): </em></strong><strong style="color: var(--text);">A Little Pricey, but Good 💲</strong></p>
+                  <ul class="list">
+                    <li><a href="https://share.google/DjaMfy1pvXQARLGwl" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Amiraj (Indian)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Best enjoyed dining in. The food is excellent, though takeout portions are smaller.</div>
+                    </li>
+                    <li><a href="https://share.google/K7b0apFCHLY7TRXnn" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Amber Ox (American)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Great food, just on the pricier side.</div>
+                    </li>
+                    <li><a href="https://share.google/irKQlfbmJEV1A6YFN" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Old City BBQ (American BBQ)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">The mac and cheese is a must. Easily the best I've had.</div>
+                    </li>
+                    <li><a href="https://share.google/L4rsr8o6YhrRag0by" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Berret's Seafood (American Seafood)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">A solid seafood spot. My parents enjoyed it. Sometimes they have live music.</div>
+                    </li>
+                    <li><a href="https://share.google/EQoq3tiFlrRpGT5PE" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Captain George's (Seafood Buffet)</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Pretty good buffet, if you like seafood.</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div style="height: 12px;"></div>
+
+                <div class="tItem" style="box-shadow:none;">
+                  <p style="margin-bottom: 8px;"><strong style="color: var(--text);"><em>My Top Recs (so far): </em></strong><strong style="color: var(--text);">Are You Willing to Make the Drive? 🚗</strong></p>
+                  <ul class="list">
+                    <li><a href="https://share.google/7l6gUhIgEMR7QsXuz" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">KPOT (Korean BBQ &amp; Hot Pot) – Norfolk</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">All-you-can-eat with a huge variety and great quality. The weekday lunch special ($21.99) is especially worth it.</div>
+                    </li>
+                    <li><a href="https://share.google/NWcKUkc33u4PWA0gs" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">757 (Korean BBQ &amp; Hot Pot) – Newport News</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Closer to Williamsburg. Not quite as good as KPOT and slightly pricier, but still a solid option.</div>
+                    </li>
+                    <li><a href="https://share.google/Wwk0u9rVPYsiEsURE" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Patio Thai – Richmond</a>
+                      <div style="margin-left: 20px; margin-top: 4px; color: var(--text); font-size: 13px;">Incredible Thai food — definitely worth the drive.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section id="things-travel">
+              <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+                <h2>Travel 🌎</h2>
+                <p class="muted" style="margin-bottom:8px;">
+                  I love traveling to see new places, experience culture, and learn from how people live.
+                </p>
+                <div class="tItem" style="box-shadow:none;">
+                  <ul class="list">
+                    <li>Recently traveled to 15 different cities in China!</li>
+                    <li>Have been to countries across Europe, Africa, Asia, and North America!</li>
+                  </ul>
+                  <p style="margin-top: 12px; margin-bottom: 0;"><em>Want to learn more or see some pictures and videos? <a href="#contact" data-route="contact" style="color: #064e4e; text-decoration: underline;">Connect with me!</a></em></p>
+                </div>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section id="things-books">
+              <div class="card pad" style="box-shadow:none;background:rgba(99,102,241,0.06);border-color:rgba(99,102,241,0.20);">
+                <h2>Books 📚</h2>
+                
+                <div class="tItem" style="box-shadow:none;">
+                  <h3 style="margin-bottom: 8px;"><strong>I'm currently reading:</strong></h3>
+                  <p style="margin-bottom: 0;"><em>A Thousand Splendid Suns</em> by Khaled Hosseini</p>
+                </div>
+
+                <div style="height: 12px;"></div>
+
+                <div class="tItem" style="box-shadow:none;">
+                  <h3 style="margin-bottom: 8px;"><strong>Future Reads:</strong></h3>
+                  <p style="margin-bottom: 8px;">My "to-read" list is getting long... but I'm always looking for the next great book :)</p>
+                  <p style="margin-bottom: 12px;">Click the link to recommend your favorite reads, hidden gems, or books everyone should experience at least once!</p>
+                  <div class="btnRow">
+                    <a class="btn" style="background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.28); color: var(--purple);" href="https://docs.google.com/forms/d/e/1FAIpQLScT8fgONnDBYEE7lEEPCA-4Ltj7Jq-YR5qHclIJWMJcqlmGCQ/viewform?usp=publish-editor" target="_blank" rel="noopener">Recommendation Box ↗</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section id="things-movies">
+              <div class="card pad" style="box-shadow:none;background:rgba(14,165,166,0.06);border-color:rgba(14,165,166,0.20);">
+                <h2>Movies 🎬</h2>
+                <p class="muted" style="margin-bottom:8px;">Once a week, my roommate and I have a movie night to relax and unwind.</p>
+                
+                <div class="tItem" style="box-shadow:none;">
+                  <h3 style="margin-bottom: 8px;"><strong>Past Movies:</strong></h3>
+                  <p style="margin-bottom: 8px;">These are movies from past movie nights that we've watched. We usually try to pick films that one or both of us haven't seen before (which is surprisingly hard to find), or ones we're simply in the mood to watch.</p>
+                  <ul class="list">
+                    <li>Kpop Demon Hunters</li>
+                    <li>Now You See Me 1 &amp; 2</li>
+                    <li>Pitch Perfect 1, 2, &amp; 3</li>
+                    <li>Fear Street Part 1</li>
+                    <li>Miss Congeniality</li>
+                    <li>Regretting you</li>
+                    <li>Kissing is the Easy Part</li>
+                    <li>Amber Alert</li>
+                    <li>Heated Rivalry</li>
+                  </ul>
+                </div>
+
+                <div style="height: 12px;"></div>
+
+                <div class="tItem" style="box-shadow:none;">
+                  <h3 style="margin-bottom: 8px;"><strong>Future Movies:</strong></h3>
+                  <p style="margin-bottom: 10px;">We are tired of watching trailers for two hours and then watching mediocre movies before going to bed on our Movie Nights. Pitch us your favorite films, hidden gems, or the "so-bad-it's-good" masterpieces!</p>
+                  <p style="margin-bottom: 12px;">The link below is our Movie Night Suggestion Box! Thanks for the recs, and just know that if we pick yours, that means you have superior movie taste. 🍿</p>
+                  <div class="btnRow">
+                    <a class="btn" style="background: rgba(14,165,166,0.12); border-color: rgba(14,165,166,0.28); color: #064e4e;" href="https://docs.google.com/forms/d/e/1FAIpQLSfqTbmzsW8QrHWum-mOJPvJSRIqS1NR0V_7xLdNfvRu9swF_w/viewform?usp=header" target="_blank" rel="noopener">Suggestion Box ↗</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div>© <span class="footerYear"></span> Natasha Yotmanee</div>
+        <div>
+          <a href="#home" data-route="home">Home</a>
+          <span class="muted2"> · </span>
+          <a href="#cv" data-route="cv">CV</a>
+          <span class="muted2"> · </span>
+          <a href="#research" data-route="research">Research &amp; Publications</a>
+          <span class="muted2"> · </span>
+          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
           <span class="muted2"> · </span>
           <a href="#posts" data-route="posts">Posts</a>
           <span class="muted2"> · </span>
@@ -1404,7 +1922,7 @@
       </footer>
     </section>
 
-    <!-- CONTACT -->
+    <!-- THINGS I LOVE & BEYOND -->
     <section class="page" id="page-contact" data-page="contact">
       <div class="card pad">
         <h1>Contact</h1>
@@ -1416,11 +1934,11 @@
           <div class="card pad contactBoxGreen" style="box-shadow:none;">
             <h3>Personal Email</h3>
             <p class="muted" style="margin:0 0 14px 0;">
-              <a href="/cdn-cgi/l/email-protection#cda3b4a2b9a0aca3a8a88daaa0aca4a1e3aea2a0"><span class="__cf_email__" data-cfemail="bfd1c6d0cbd2ded1dadaffd8d2ded6d391dcd0d2">[email&#160;protected]</span></a>
+              <a href="mailto:nyotmanee@gmail.com">nyotmanee@gmail.com</a>
             </p>
             <h3>School Email</h3>
             <p class="muted" style="margin:0;">
-              <a href="/cdn-cgi/l/email-protection#721c010b1d061f131c171732051f5c171607"><span class="__cf_email__" data-cfemail="09677a70667d6468676c6c497e64276c6d7c">[email&#160;protected]</span></a>
+              <a href="mailto:nsyotmanee@wm.edu">nsyotmanee@wm.edu</a>
             </p>
           </div>
 
@@ -1443,6 +1961,8 @@
             <span class="muted2"> · </span>
             <a href="#posts" data-route="posts">Posts</a>
             <span class="muted2"> · </span>
+            <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+            <span class="muted2"> · </span>
             <a href="#contact" data-route="contact">Contact</a>
           </div>
         </footer>
@@ -1451,9 +1971,11 @@
   </main>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const routes = ["home","cv","research","posts","contact"];
+    const routes = ["home","cv","research","posts","things","contact"];
     const pages = [...document.querySelectorAll(".page")];
     const navLinks = [...document.querySelectorAll("[data-route]")];
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
 
     function setActiveRoute(route){
       const safe = routes.includes(route) ? route : "home";
@@ -1464,6 +1986,27 @@
     function onHashChange(){
       const hash = (location.hash || "#home").replace("#","");
       setActiveRoute(hash);
+    }
+
+    // Hamburger menu toggle
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("visible");
+      });
+    }
+
+    // Close menu when clicking on a link (only on mobile)
+    if (nav) {
+      nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          // Only close menu on screens under 1000px
+          if (window.innerWidth < 1000) {
+            hamburger.classList.remove("active");
+            nav.classList.remove("visible");
+          }
+        });
+      });
     }
 
     window.addEventListener("hashchange", onHashChange);
@@ -1586,6 +2129,97 @@
 
     window.addEventListener('scroll', updateActiveSidebarLink, { passive: true });
     updateActiveSidebarLink();
+
+    // Check for CV page and ensure sidebar updates
+    if (document.querySelector('#page-cv')) {
+      setInterval(updateActiveSidebarLink, 500);
+    }
+
+    // Things I Love Sidebar Link Active State and Autoscroll
+    const thingsSidebarLinks = document.querySelectorAll('.thingsSidebarLink');
+    
+    function updateActiveThingsSidebarLink() {
+      const scrollPosition = window.scrollY + 120;
+      const pageHeight = document.body.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const sections = ['things-bucketlist', 'things-food', 'things-travel', 'things-books', 'things-movies'];
+      let activeSection = sections[0];
+
+      // Check if at bottom of page - highlight Movies
+      if (scrollPosition + windowHeight >= pageHeight - 100) {
+        activeSection = 'things-movies';
+      } else {
+        for (let section of sections) {
+          const element = document.getElementById(section);
+          if (element && element.offsetTop <= scrollPosition) {
+            activeSection = section;
+          }
+        }
+      }
+
+      thingsSidebarLinks.forEach(link => {
+        link.classList.remove('active');
+        const linkSection = link.getAttribute('data-section');
+        if (linkSection === activeSection) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    thingsSidebarLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = link.getAttribute('data-section');
+        
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = document.querySelector('.topbar')?.offsetHeight || 80;
+          const top = element.offsetTop - headerHeight - 20;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        setTimeout(() => updateActiveThingsSidebarLink(), 100);
+      });
+    });
+
+    window.addEventListener('scroll', updateActiveThingsSidebarLink, { passive: true });
+    updateActiveThingsSidebarLink();
+
+    // Check for Things page and ensure sidebar updates
+    if (document.querySelector('#page-things')) {
+      setInterval(updateActiveThingsSidebarLink, 500);
+    }
+
+    // Scroll to top and bottom buttons for CV sidebar
+    const cvScrollTop = document.getElementById('cvScrollTop');
+    const cvScrollBottom = document.getElementById('cvScrollBottom');
+    
+    if (cvScrollTop) {
+      cvScrollTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (cvScrollBottom) {
+      cvScrollBottom.addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+    }
+
+    // Scroll to top and bottom buttons for Things I Love sidebar
+    const thingsScrollTop = document.getElementById('thingsScrollTop');
+    const thingsScrollBottom = document.getElementById('thingsScrollBottom');
+    
+    if (thingsScrollTop) {
+      thingsScrollTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (thingsScrollBottom) {
+      thingsScrollBottom.addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+    }
   </script>
 </body>
 </html>
